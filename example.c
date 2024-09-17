@@ -34,7 +34,7 @@ int main(void) {
 		RSoft_matrix m = RSoft_initMatrix();
 		m = RSoft_translateMatrix(m, RSOFT_VECTOR2D(-500, -450));
 		m = RSoft_rotateMatrix(m, angle, 1, 0, 1);
-		m = RSoft_translateMatrix(m, RSOFT_VECTOR3D(0, 0, 100));
+		m = RSoft_translateMatrix(m, RSOFT_VECTOR3D(500, 450, 100));
 
 		RSoft_setMatrix(m);
 
