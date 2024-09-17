@@ -29,8 +29,8 @@ int main(void) {
 				RSoft_setCanvasSize(RGFW_AREA(win->r.w, win->r.h));
         } 
 
-        RSoft_clear(win->buffer, (u8[4]){0, 0, 255, 15});
-		
+		RSoft_clear(win->buffer, (u8[4]){0, 0, 255, 15});
+
 		RSoft_matrix m = RSoft_initMatrix();
 		m = RSoft_translateMatrix(m, RSOFT_VECTOR2D(-500, -450));
 		m = RSoft_rotateMatrix(m, angle, 1, 0, 1);
@@ -47,8 +47,8 @@ int main(void) {
 			
 		//angle = 1;
 		angle++;
-        RGFW_window_swapBuffers(win);
-        RGFW_window_checkFPS(win, 60);
+		RGFW_window_swapBuffers(win);
+		RGFW_window_checkFPS(win, 60);
     }
 
     RGFW_window_close(win);
