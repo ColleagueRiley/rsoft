@@ -43,8 +43,11 @@ int main(void) {
 		RSoft_vector v3 = RSOFT_VECTOR2D(500, 500);	
 		//printf("%f %f\n", v.x, v.y);
 		RSoft_drawTriangleF(win->buffer, (RSoft_vector[3]){v1, v2, v3}  , (u8[4]){0, 255, 0, 255});
-		//RSoft_drawRectF(win->buffer, RSOFT_RECTF(200, 200, 200, 200), (u8[4]){0, 255, 0, 255}); 
-			
+		
+		//RSoft_drawRectFOutline(win->buffer, RSOFT_RECTF(200, 200, 200, 200), (u8[4]){0, 255, 0, 255}); 
+		
+		//RSoft_drawPolygonF(win->buffer, RSOFT_RECTF(200, 200, 100, 100), 8, (u8[4]){0, 255, 0, 255});
+
 		//angle = 1;
 		angle++;
 		RGFW_window_swapBuffers(win);

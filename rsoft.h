@@ -182,13 +182,25 @@ RSOFTDEF void RSoft_clear(u8* buffer, u8 color[4]);
 RSOFTDEF void RSoft_drawRect(u8* buffer, RSoft_rect r, u8 color[4]);
 RSOFTDEF void RSoft_drawRectF(u8* buffer, RSoft_rectF r, u8 color[4]);
 
+RSOFTDEF void RSoft_drawRectOutline(u8* buffer, RSoft_rect r, u8 color[4]);
+RSOFTDEF void RSoft_drawRectFOutline(u8* buffer, RSoft_rectF r, u8 color[4]);
+
 RSOFTDEF void RSoft_drawTriangleF(u8* buffer, const RSoft_vector points[3], u8 color[4]);
 RSOFTDEF void RSoft_drawTriangle(u8* buffer, const RSoft_point points[3], u8 color[4]);
 
-void RSoft_drawVector(u8* buffer, RSoft_vector v, u8 color[4]);
-void RSoft_drawPoint(u8* buffer, RSoft_point p, u8 color[4]);
-void RSoft_drawLine(u8* buffer, RSoft_point start, RSoft_point end, u8 color[4]);
-void RSoft_drawLineF(u8* buffer, RSoft_vector start, RSoft_vector end, u8 color[4]); 
+RSOFTDEF void RSoft_drawTriangleOutline(u8* buffer, const RSoft_vector points[3], u8 color[4]);
+RSOFTDEF void RSoft_drawTriangleOutlineF(u8* buffer, const RSoft_vector points[3], u8 color[4]);
+
+RSOFTDEF void RSoft_drawPolygon(u8* buffer, RSoft_rect r, size_t angles, u8 color[4]);
+RSOFTDEF void RSoft_drawPolygonF(u8* buffer, RSoft_rectF r, size_t angles, u8 color[4]);
+
+RSOFTDEF void RSoft_drawPolygonFOutline(u8* buffer, RSoft_rectF r, size_t angles, u8 color[4]);
+RSOFTDEF void RSoft_drawPolygonOutline(u8* buffer, RSoft_rect r, size_t angles, u8 color[4]);
+
+RSOFTDEF void RSoft_drawVector(u8* buffer, RSoft_vector v, u8 color[4]);
+RSOFTDEF void RSoft_drawPoint(u8* buffer, RSoft_point p, u8 color[4]);
+RSOFTDEF void RSoft_drawLine(u8* buffer, RSoft_point start, RSoft_point end, u8 color[4]);
+RSOFTDEF void RSoft_drawLineF(u8* buffer, RSoft_vector start, RSoft_vector end, u8 color[4]); 
 
 #endif /* RSOFT_HEADER */
 
@@ -338,12 +350,24 @@ void RSoft_clear(u8* buffer, u8 color[4]) {
         }
     }    
 }
- 
+
+void RSoft_drawRectOutline(u8* buffer, RSoft_rect r, u8 color[4]) {
+	RSoft_drawRectFOutline(buffer, RSOFT_RECTF(r.x, r.y, r.w, r.h), color);
+}
+
+void RSoft_drawRectFOutline(u8* buffer, RSoft_rectF r, u8 color[4]) {
+	RSoft_drawLineF(buffer, RSOFT_VECTOR2D(r.x, r.y), RSOFT_VECTOR2D(r.x + r.w, r.y), color);	
+	RSoft_drawLineF(buffer, RSOFT_VECTOR2D(r.x, r.y), RSOFT_VECTOR2D(r.x, r.y + r.h), color);	
+	RSoft_drawLineF(buffer, RSOFT_VECTOR2D(r.x + r.w, r.y), RSOFT_VECTOR2D(r.x + r.w, r.y + r.h), color);	
+	RSoft_drawLineF(buffer, RSOFT_VECTOR2D(r.x, r.y + r.h), RSOFT_VECTOR2D(r.x + r.w, r.y + r.h), color);	
+}
+
 void RSoft_drawRect(u8* buffer, RSoft_rect r, u8 color[4]) {
 	RSoft_drawRectF(buffer, RSOFT_RECTF(r.x, r.y, r.w, r.h), color);	
 }
 
 
+	
 void RSoft_drawRectF(u8* buffer, RSoft_rectF r, u8 color[4]) {
 	RSoft_renderInfoStruct info = RSoft_renderInfo;
 	
@@ -353,6 +377,41 @@ void RSoft_drawRectF(u8* buffer, RSoft_rectF r, u8 color[4]) {
 		}
     }
 }
+
+void RSoft_drawPolygon(u8* buffer, RSoft_rect r, size_t angles, u8 color[4]) {
+	RSoft_drawPolygonF(buffer, RSOFT_RECTF(r.x, r.y, r.w, r.h), angles, color);
+}
+
+void RSoft_drawPolygonF(u8* buffer, RSoft_rectF r, size_t angles, u8 color[4]) {
+	for (size_t i = 0; i < 360; i++) {
+		float delta = (i * (360 / angles)) * DEG2RAD;
+		float delta2 = ((i + 1) * (360 / angles)) * DEG2RAD;
+
+		RSoft_vector nPoints[3] = {
+									RSOFT_VECTOR2D(r.x - (cos(delta) * r.w), r.y + (sin(delta) * r.h)),
+									RSOFT_VECTOR2D(r.x - (cos(delta2) * r.w), r.y + (sin(delta2) * r.h)),
+									RSOFT_VECTOR2D(r.x, r.y),
+		};
+		RSoft_drawTriangleF(buffer, nPoints, color);
+	}
+}
+
+void RSoft_drawPolygonOutline(u8* buffer, RSoft_rect r, size_t angles, u8 color[4]) {
+	RSoft_drawPolygonFOutline(buffer, RSOFT_RECTF(r.x, r.y, r.w, r.h), angles, color);
+}
+
+void RSoft_drawPolygonFOutline(u8* buffer, RSoft_rectF r, size_t angles, u8 color[4]) {
+	for (size_t i = 0; i < 360; i++) {
+		float delta = (i * (360 / angles)) * DEG2RAD;
+		float delta2 = ((i + 1) * (360 / angles)) * DEG2RAD;
+		
+		RSoft_vector p1 = RSOFT_VECTOR2D(r.x - (cos(delta) * r.w), r.y + (sin(delta) * r.h));
+		RSoft_vector p2 = RSOFT_VECTOR2D(r.x - (cos(delta2) * r.w), r.y + (sin(delta2) * r.h));
+		
+		RSoft_drawLineF(buffer, p1, p2, color);
+	}
+}
+
 
 void RSoft_drawPoint(u8* buffer, RSoft_point p, u8 color[4]) {
 	RSoft_drawVector(buffer, RSOFT_VECTOR2D(p.x, p.y), color);
@@ -379,15 +438,37 @@ void RSoft_drawLineF(u8* buffer, RSoft_vector start, RSoft_vector end, u8 color[
 		start = end;
 		end = oldStart;
 	}
-	
-	float slope = (end.y - start.y) / (end.x - start.y);
 
-	for (float x = start.x; x < end.x; x++) {
-		// y = mx + b
-		float y = (slope * (x - start.x)) + start.y;	
-		
-		RSoft_drawVector(buffer, RSOFT_VECTOR2D(x, y), color);
+	float slopeX = (end.x - start.x); 
+	float slopeY = (end.y - start.y);
+	
+	float steps = fabs(slopeY);
+	if (fabs(slopeX) >= fabs(slopeY))
+		steps = fabs(slopeX);
+	
+	slopeX /= steps;
+	slopeY /= steps;
+
+	for (float i = 0; i < steps; i++) {
+		RSoft_drawVector(buffer, RSOFT_VECTOR2D(start.x, start.y), color);
+		start.x += slopeX;
+		start.y += slopeY;
 	}
+}
+
+
+void RSoft_drawTriangleOutline(u8* buffer, const RSoft_vector points[3], u8 color[4]) {
+	RSoft_vector npoints[3] = {RSOFT_VECTOR2D(points[0].x, points[0].y), 
+							   RSOFT_VECTOR2D(points[1].x, points[1].y), 
+							   RSOFT_VECTOR2D(points[2].x, points[2].y)};
+
+	RSoft_drawTriangleOutlineF(buffer, npoints, color);
+}
+
+void RSoft_drawTriangleOutlineF(u8* buffer, const RSoft_vector points[3], u8 color[4]) {
+	RSoft_drawLineF(buffer, points[0], points[1], color);	
+	RSoft_drawLineF(buffer, points[1], points[2], color);	
+	RSoft_drawLineF(buffer, points[2], points[0], color);		
 }
 
 void RSoft_drawTriangle(u8* buffer, const RSoft_point points[3], u8 color[4]) {
@@ -398,31 +479,51 @@ void RSoft_drawTriangle(u8* buffer, const RSoft_point points[3], u8 color[4]) {
 	RSoft_drawTriangleF(buffer, npoints, color);
 }
 
+
 void RSoft_drawTriangleF(u8* buffer, const RSoft_vector points[3], u8 color[4]) {
-	RSoft_drawLineF(buffer, points[0], points[1], color);	
-	RSoft_drawLineF(buffer, points[1], points[2], color);	
-	RSoft_drawLineF(buffer, points[2], points[0], color);		
+	RSoft_drawTriangleOutlineF(buffer, points, color);
+	static RSoft_vector center = RSOFT_VECTOR2D(0, 0);
 
-	RSoft_vector lowest = RSOFT_VECTOR2D(-1, -1);
-	RSoft_vector highest = RSOFT_VECTOR2D(-1, -1);
+	if (center.x == 0 && center.y == 0) {
+		RSoft_vector lowest = RSOFT_VECTOR2D(-1, -1);
+		RSoft_vector highest = RSOFT_VECTOR2D(-1, -1);
+		
+		for (size_t i = 0; i < 3; i++) {
+			if (lowest.x == -1 || lowest.x > points[i].x)
+				lowest.x = points[i].x;
+			if (lowest.y == -1 || lowest.y > points[i].x)
+				lowest.y = points[i].y;
+
+			if (highest.x == -1 || highest.x < points[i].x)
+				highest.x = points[i].x;
+			if (highest.y == -1 || highest.y < points[i].x)
+				highest.y = points[i].y;
+		}
+
+		center = RSOFT_VECTOR2D((lowest.x + highest.x) / 2, (lowest.y + highest.y) / 2);
+	}
 	
+	if (points[0].x == center.x && points[0].y == center.y) {
+		center = RSOFT_VECTOR2D(0, 0);
+		return;
+	}
+	
+	//printf("%f %f | %f %f\n", points[0].x, points[0].y);
+	RSoft_vector nPoints[3] = {points[0], points[1], points[2]};
 	for (size_t i = 0; i < 3; i++) {
-		if (lowest.x == -1 || lowest.x > points[i].x)
-			lowest.x = points[i].x;
-		if (lowest.y == -1 || lowest.y > points[i].x)
-			lowest.y = points[i].y;
+		if (nPoints[i].x > center.x) 
+			nPoints[i].x -= 1;
+		if (nPoints[i].x < center.x) 
+			nPoints[i].x += 1;
 
-		if (highest.x == -1 || highest.x < points[i].x)
-			lowest.x = points[i].x;
-		if (highest.y == -1 || highest.y < points[i].x)
-			highest.y = points[i].y;
+		if (nPoints[i].y > center.y) 
+			nPoints[i].y -= 1;
+		
+		if (nPoints[i].y < center.y) 
+			nPoints[i].y += 1;
 	}
 
-
-
-	RSoft_vector center = RSOFT_VECTOR2D((lowest.x + highest.x) / 2, (lowest.y + highest.y) / 2);
-
-		
+	RSoft_drawTriangleF(buffer, nPoints, color);
 }
 
 #endif
