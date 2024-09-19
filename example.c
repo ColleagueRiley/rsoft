@@ -48,7 +48,8 @@ int main(void) {
 		RSoft_vector v2 = RSOFT_VECTOR2D(400, 400);	
 		RSoft_vector v3 = RSOFT_VECTOR2D(500, 500);	
 		//printf("%f %f\n", v.x, v.y);
-		RSoft_drawTriangleF(win->buffer, (RSoft_vector[3]){v1, v2, v3}  , (u8[4]){255, 255, 255, 255});
+		//RSoft_drawTriangleF(win->buffer, (RSoft_vector[3]){v1, v2, v3}  , (u8[4]){255, 255, 255, 255});
+		//RSoft_drawTriangleF(win->buffer, (RSoft_vector[3]){v1, v2, v3}  , (u8[4]){0, 255, 0, 255});
 		
 		//RSoft_setTexture(buffer, RSOFT_RECT(0, 0, 200, 200), RSOFT_AREA(w, h));
 		//RSoft_drawRectF(win->buffer, RSOFT_RECTF(200, 200, 200, 200), (u8[4]){0, 255, 0, 255}); 
@@ -66,6 +67,7 @@ int main(void) {
 
 		RSoft_setTexture(buffer, RSOFT_RECT(0, 0, 100, 100), RSOFT_AREA(w, h));
 		//RSoft_drawPolygonF(win->buffer, RSOFT_RECTF(200, 200, 100, 100), 6, (u8[4]){255, 255, 255, 255});
+		RSoft_drawPolygonF(win->buffer, RSOFT_RECTF(200, 200, 100, 100), 6, (u8[4]){255, 255, 255, 255});
 
 		//angle = 1;
 		angle++;
