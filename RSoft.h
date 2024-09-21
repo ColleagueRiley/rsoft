@@ -1,7 +1,6 @@
 /* TODO
 - textures for poylgons
 - textures for triangles
-- psuedo 3D rendering
 */
 
 
@@ -160,6 +159,11 @@ typedef struct RSoft_rectF { float x, y, w, h; } RSoft_rectF;
 #define RSOFT_RECTF(x, y, w, h) (RSoft_rectF){x, y, w, h}
 
 #include <math.h>
+
+#ifndef M_PI
+	#define M_PI 3.14159265358979323846
+#endif
+
 
 #ifndef DEG2RAD
 #define DEG2RAD M_PI/180
@@ -343,15 +347,18 @@ void RSoft_setTexture(u8* texture, RSoft_rect texRect, RSoft_area textureArea) {
 }
 
 u32 RSoft_textureGetColor(RSoft_point texPoint, RSoft_rect texRect, u8* texture, RSoft_area textureArea, u8 color[4]) {
-	u8 output[4] = {color[0], color[1], color[2], color[2]};
+	u8 output[4] = {color[0], color[1], color[2], color[3]};
 	
 	if (texture == NULL) 
 		return *((u32*)output);
 	
 	texRect.x += texPoint.x * (textureArea.w / texRect.w); 
 	texRect.y += texPoint.y * (textureArea.h / texRect.h);
-
+	
 	size_t index = (texRect.y * textureArea.w * 4) + texRect.x * 4; 
+	if (index > textureArea.w * textureArea.h * 4)
+		return *((u32*)output);
+	
 	output[0] = texture[index];
 	output[1] = texture[index + 1];
 	output[2] = texture[index + 2];
@@ -411,7 +418,7 @@ void RSoft_drawRectF(u8* buffer, RSoft_rectF r, u8 color[4]) {
 	RSoft_renderInfoStruct info = RSoft_renderInfo;
 	
 	for(float x = r.x; x < (r.x + r.w); x++) {
-        for(float y = r.y; y < (r.y + r.h); y++) {
+		for(float y = r.y; y < (r.y + r.h); y++) {
 			u32 texColor = RSoft_textureGetColor(RSOFT_POINT(x - r.x, y - r.y), info.texRect, info.texture, info.textureArea, color);
 			RSoft_drawVector(buffer, RSOFT_VECTOR2D(x, y), (u8*)(&texColor));
 		}
@@ -445,12 +452,16 @@ void RSoft_drawPolygonF(u8* buffer, RSoft_rectF r, size_t angles, u8 color[4]) {
 		
 			RSoft_vector p1 = RSOFT_VECTOR2D(r.x - (cos(delta) * r.w), r.y + (sin(delta) * r.h));
 			RSoft_vector p2 = RSOFT_VECTOR2D(r.x - (cos(delta2) * r.w), r.y + (sin(delta2) * r.h));
-			RSoft_point texPoint = RSOFT_POINT((p1.x - r.w) + (p2.x - p1.x), (p1.y - r.h) + (p2.x - p1.y));
+			RSoft_point texPoint = RSOFT_POINT(abs((p1.x - (r.x - rect.w))), abs((p2.y - (r.y - rect.h))));
 
-			u32 texColor = RSoft_textureGetColor(texPoint, info.texRect, info.texture, info.textureArea, color);
+
+			u32 texColor = RSoft_textureGetColor(RSOFT_POINT(abs((p1.x - (r.x - (rect.w / 2)))), 
+															 abs((p1.y - (r.y - (rect.h / 4))))), info.texRect, info.texture, info.textureArea, color);
+
+			//u32 texColor = RSoft_textureGetColor(texPoint, info.texRect, info.texture, info.textureArea, color);
 			RSoft_drawLineF(buffer, p1, p2, (u8*)&texColor);
 		}
-
+		
 		r.w -= slopeX;
 		r.h -= slopeY;
 	}

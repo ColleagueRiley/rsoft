@@ -2565,7 +2565,7 @@ Start of Linux / Unix defines
 		// with your application - robrohan 
 		XClassHint *hint = XAllocClassHint();
 		assert(hint != NULL);
-		hint->res_class = (char*)"RGFW";
+		hint->res_class = (char*)name;
 		hint->res_name = (char*)name; // just use the window name as the app name
 		XSetClassHint((Display*) win->src.display, win->src.window, hint);
 		XFree(hint);
