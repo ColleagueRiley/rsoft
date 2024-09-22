@@ -53,7 +53,7 @@ void drawWall(RGFW_window* win, RSoft_vector center, RSoft_vector player, float 
 }
 
 int main(void) {
-    RGFW_window* win = RGFW_createWindow("Basic buffer example", RGFW_RECT(0, 0, 800, 800), RGFW_CENTER | RGFW_TRANSPARENT_WINDOW);
+    RGFW_window* win = RGFW_createWindow("Doom-Like example", RGFW_RECT(0, 0, 800, 800), RGFW_CENTER | RGFW_TRANSPARENT_WINDOW);
     
     RSoft_setBufferSize(RGFW_getScreenSize());
     RSoft_setCanvasSize(RGFW_AREA(win->r.w, win->r.h));
