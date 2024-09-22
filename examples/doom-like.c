@@ -42,8 +42,12 @@ void drawLine(RGFW_window* win, RSoft_vector center, RSoft_vector player, float 
 	}
 }
 
+u8* buffer = NULL;
+int w, h, c;
+
 void drawWall(RGFW_window* win, RSoft_vector center, RSoft_vector player, float angle, RSoft_rectF rect) {
 	for (float i = 0; i < rect.h; i += 0.1) {
+		RSoft_setTexture(buffer, RSOFT_RECT(0, i, w, h), RSOFT_AREA(w, h));
 		drawLine(win, center, player, angle, RSOFT_VECTOR3D(rect.x, rect.y, i), RSOFT_VECTOR3D(rect.x + rect.w, rect.y, i));
 	}
 }
@@ -54,8 +58,7 @@ int main(void) {
     RSoft_setBufferSize(RGFW_getScreenSize());
     RSoft_setCanvasSize(RGFW_AREA(win->r.w, win->r.h));
 
-	int w, h, c;
-	u8* buffer = stbi_load("tex.jpg", &w, &h, &c, 4);
+	buffer = stbi_load("wall2.jpg", &w, &h, &c, 4);
 
 	float angle = 0;
 	float fov = 120;
@@ -116,7 +119,7 @@ int main(void) {
 		if (RGFW_isPressed(win, RGFW_Down))
 			player.z += 5;
 
-		RSoft_clear(win->buffer, (u8[4]){0, 0, 255, 15});
+		RSoft_clear(win->buffer, (u8[4]){0, 0, 255, 255});
 		RSoft_setMatrix(RSoft_initMatrix());
 		
 		if (RGFW_isPressed(win, RGFW_Tab)) {
