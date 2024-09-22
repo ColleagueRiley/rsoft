@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGFW WebASM Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            color: rgb(200, 200, 200)
+        }
+        h1 {
+            margin-bottom: 20px; /* Add space below the header */
+        }
+
+        .links-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .link-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            max-width: 200px;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .link-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .link-card h2 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+    </style>
+
+<style>
+    .header img {
+        float: left;
+        width: 100px;
+        height: 100px;
+        background: #555;
+      }
+      
+      .header h1 {
+        position: relative;
+        top: 18px;
+        left: 10px;
+      }
+</style>
+</head>
+<body style="background-color:rgb(15, 25, 45);">
+    <h1>WebASM Examples</h1>
+
+    <br> <!-- Add a line break here -->
+    <br> <!-- Add a line break here -->
+    <div class="links-container">
+        <a href="./examples/shapes.html" class="link-card">
+            <img src="shapes.gif" alt="Shapes Example">
+            <h2>Shapes</h2>
+        </a>
+        
+		<a href="./examples/textures.html" class="link-card">
+            <img src="textures.gif" alt="Textures Example">
+            <h2>Textures</h2>
+        </a>
+
+		<a href="./examples/raycaster.html" class="link-card">
+            <img src="raycaster.gif" alt="Raycaster Example">
+            <h2>Raycaster</h2>
+        </a>
+     
+		<a href="./examples/doom-like.html" class="link-card">
+            <img src="doom-like.gif" alt="Doom-like Example">
+            <h2>Doom-like</h2>
+        </a>
+
+	</div>
+</body>
+</html>
