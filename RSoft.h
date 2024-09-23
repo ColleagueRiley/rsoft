@@ -175,6 +175,8 @@ typedef struct RSoft_matrix { float m[16];} RSoft_matrix;
 RSOFTDEF void RSoft_setCanvasSize(RSoft_area area);
 RSOFTDEF void RSoft_setBufferSize(RSoft_area area);
 
+RSOFTDEF void RSoft_copyBuffer(u8* dest, size_t width, u8* src, RSoft_rect rect);
+
 RSOFTDEF void RSoft_setMatrix(RSoft_matrix matrix);
 RSOFTDEF RSoft_matrix RSoft_initMatrix(void);
 RSOFTDEF RSoft_matrix RSoft_multiplyMatrix(float left[16], float right[16]);
@@ -241,6 +243,14 @@ void RSoft_setBufferSize(RSoft_area area) {
 	RSoft_renderInfo.bufferSize = area;	
 }
 
+void RSoft_copyBuffer(u8* dest, size_t width, u8* src, RSoft_rect rect) {
+	u32 y;
+    for (y = 0; y < (u32)rect.h; y++) {
+        u32 index = ((rect.y + y) * (4 * width)) + rect.x * 4;
+        memcpy(dest + index, src + (4 * rect.w * y), rect.w * 4 * sizeof(u8));
+    }
+}
+
 void RSoft_setMatrix(RSoft_matrix matrix) {
 	RSoft_renderInfo.matrix = matrix;
 }
@@ -302,7 +312,6 @@ RSoft_matrix RSoft_rotateMatrix(RSoft_matrix matrix, float angle, float x, float
 
 	return RSoft_multiplyMatrix(matrix.m, rotateMatrix);
 }
-
 
 RSoft_matrix RSoft_simpleRotateMatrix(RSoft_matrix matrix, float angle) {
 	float sinres = sinf(DEG2RAD * angle);

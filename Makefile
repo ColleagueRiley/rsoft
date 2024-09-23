@@ -76,7 +76,8 @@ EXAMPLE_OUTPUTS = \
     examples/shapes \
     examples/textures \
 	examples/raycaster \
-	examples/doom-like
+	examples/doom-like \
+	examples/text \
 
 all: $(EXAMPLE_OUTPUTS)
 
