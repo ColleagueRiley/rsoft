@@ -13,6 +13,12 @@
 #define RFONT_RENDER_LEGACY
 #define RFONT_NO_OPENGL
 
+#define RFONT_GET_WORLD_X(x, w) x
+#define RFONT_GET_WORLD_Y(x, h) y
+
+#define RFONT_GET_TEXPOSX(x) x
+#define RFONT_GET_TEXPOSY(y) y
+
 #define RFONT_IMPLEMENTATION
 #include "RFont.h"
 
@@ -43,7 +49,7 @@ void RFont_bitmap_to_atlas(u32 atlas, u8* bitmap, float x, float y, float w, flo
 	u8* buffer = RFont_info.atlases[atlas];
 	u32 atlasWidth = *((u32*)RFont_info.atlases[atlas] - 1);
 	
-	RSoft_copyBuffer(buffer, atlasWidth, bitmap, RSOFT_RECT(x * atlasWidth, y * RFONT_ATLAS_HEIGHT, w, h));
+	RSoft_copyBuffer(buffer, atlasWidth, bitmap, RSOFT_RECT(x, y, w, h));
 }
 
 void RFont_render_set_color(float r, float g, float b, float a) {
@@ -53,33 +59,19 @@ void RFont_render_set_color(float r, float g, float b, float a) {
 
 RGFW_window* win;
 
-#define GET_NORMAL_X(x) ((x) + 1) * (win->r.w / 2)
-#define GET_NORMAL_Y(y) (1.0 - (y)) * (win->r.h / 2)
-
-
 
 void RFont_render_text(u32 atlas, float* verts, float* tcoords, size_t nverts) {
+	u32 atlasWidth = *((u32*)RFont_info.atlases[atlas] - 1);
 	for (size_t i = 0; i < nverts; i += 6) {
-		RSoft_vector npoints[3] = {RSOFT_VECTOR2D(GET_NORMAL_X(verts[i]), GET_NORMAL_Y(verts[i + 1])), 
-								   RSOFT_VECTOR2D(GET_NORMAL_X(verts[i + 2]), GET_NORMAL_Y(verts[i + 3])), 
-								   RSOFT_VECTOR2D(GET_NORMAL_X(verts[i + 4]), GET_NORMAL_Y(verts[i + 5]))};
+		RSoft_vector npoints[3] = {RSOFT_VECTOR2D(verts[i], verts[i + 1]), 
+								   RSOFT_VECTOR2D(verts[i + 2], verts[i + 3]), 
+								   RSOFT_VECTOR2D(verts[i + 4], verts[i + 5])};
 	
-		/*printf("first: {%f, %f}, {%f, %f}, {%f, %f}\n", (verts[i]), (verts[i + 1]), 
-								   verts[i + 2], (verts[i + 3]), 
-									(verts[i + 4]), (verts[i + 5]));
-		*/
-
-		 	
-		/*printf("last: {%f, %f}, {%f, %f}, {%f, %f}\n", GET_NORMAL_X(verts[i]), GET_NORMAL_Y(verts[i + 1]), 
-								   GET_NORMAL_X(verts[i + 2]), GET_NORMAL_Y(verts[i + 3]), 
-									GET_NORMAL_X(verts[i + 4]), GET_NORMAL_Y(verts[i + 5]));
-	*/
-		RSoft_drawRectF(win->buffer, RSOFT_RECTF(npoints[0].x, npoints[0].y, 
-						npoints[2].x - npoints[0].x, abs(npoints[1].y - npoints[0].y)), (u8*)&RFont_info.color);
-		
-		printf("%f %f %f %f\n", npoints[0].x, npoints[0].y, 
-						npoints[2].x - npoints[0].x, abs(npoints[1].y - npoints[0].y));
-		//RSoft_drawTriangleF(win->buffer, npoints, (u8*)&RFont_info.color);
+		RSoft_setTexture(RFont_info.atlases[atlas], RSOFT_RECT(tcoords[0], tcoords[1], 
+														atlasWidth, RFONT_ATLAS_HEIGHT), 
+														RSOFT_AREA(atlasWidth, RFONT_ATLAS_HEIGHT));
+		RSoft_drawRectF(win->buffer, RSOFT_RECTF(npoints[0].x, npoints[1].y, 
+						(npoints[2].x - npoints[0].x), abs(npoints[0].y - npoints[1].y)), (u8*)&RFont_info.color);	
 	}
 }
 
@@ -117,10 +109,10 @@ int main(void) {
 			}
 		} 
 
-		RSoft_clear(win->buffer, (u8[4]){0, 0, 255, 15});
+		RSoft_clear(win->buffer, (u8[4]){0, 0, 255, 255});
         RFont_set_color(0.0f, 1.0f, 0, 1.0f);
 
-        RFont_draw_text(font, "a", 0, 0, 60);
+        RFont_draw_text(font, "abcdefghijklmnopqrstuvwxyz", 20, 0, 120);
 	
 		RGFW_window_swapBuffers(win);
     }
