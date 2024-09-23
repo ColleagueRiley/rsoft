@@ -11,15 +11,13 @@ CUSTOM_CFLAGS =
 # used for the examples
 CFLAGS = 
 
-DX11_LIBS = -static -lgdi32 -lm -lwinmm -ldxgi -ld3d11 -luuid -ld3dcompiler
-VULKAN_LIBS = -lgdi32 -lm -lwinmm -I $(VULKAN_SDK)\Include -L $(VULKAN_SDK)\Lib -lvulkan-1
 LIBS := -static -lgdi32 -lm -lwinmm -ggdb
 EXT = .exe
 LIB_EXT = .dll
 
 LIBS += -D _WIN32_WINNT="0x0501"
 
-WARNINGS =  -Wall -Wstrict-prototypes -Wextra -Wstrict-prototypes -Wold-style-definition -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-but-set-variable -Wno-missing-braces -Wno-missing-variable-declarations -Wno-redundant-decls -Wno-unused-function -Wno-unused-label -Wno-unused-result -Wno-incompatible-pointer-types -Wno-format -Wno-format-extra-args -Wno-implicit-function-declaration -Wno-implicit-int -Wno-pointer-sign -Wno-switch -Wno-switch-default -Wno-switch-enum -Wno-unused-value -Wno-type-limits
+WARNIGNS = 
 OS_DIR = \\
 
 detected_OS = windows
