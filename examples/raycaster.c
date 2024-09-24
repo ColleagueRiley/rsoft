@@ -81,30 +81,30 @@ int main(void) {
         }
 		
 		if (RGFW_isPressed(win, RGFW_w)) {
-			RSoft_vector next = RSOFT_VECTOR2D(player.x + cos(angle * DEG2RAD) / 20, 
-											   player.y + sin(angle * DEG2RAD) / 20);
+			RSoft_vector next = RSOFT_VECTOR2D(player.x + RSoft_cos(angle) / 20, 
+											   player.y + RSoft_sin(angle) / 20);
 
 			if (map[(size_t)((size_t)next.y * map_width) + (size_t)next.x] == 0)
 				player = next;
 		}
 		if (RGFW_isPressed(win, RGFW_s)){
-			RSoft_vector next = RSOFT_VECTOR2D(player.x - cos(angle * DEG2RAD) / 20, 
-											   player.y - sin(angle * DEG2RAD) / 20);
+			RSoft_vector next = RSOFT_VECTOR2D(player.x - RSoft_cos(angle) / 20, 
+											   player.y - RSoft_sin(angle) / 20);
 			if (map[(size_t)((size_t)next.y * map_width) + (size_t)next.x] == 0)
 				player = next;
 		}
 
 		if (RGFW_isPressed(win, RGFW_a)) {
-			RSoft_vector next = RSOFT_VECTOR2D(player.x - cos((angle + 90) * DEG2RAD) / 20, 
-											   player.y - sin((angle + 90) * DEG2RAD) / 20);
+			RSoft_vector next = RSOFT_VECTOR2D(player.x - RSoft_cos(angle + 90) / 20, 
+											   player.y - RSoft_sin(angle + 90) / 20);
 
 			if (map[(size_t)((size_t)next.y * map_width) + (size_t)next.x] == 0)
 				player = next;
 		}
 
 		if (RGFW_isPressed(win, RGFW_d)) {
-			RSoft_vector next = RSOFT_VECTOR2D(player.x + cos((angle + 90) * DEG2RAD) / 20, 
-											   player.y + sin((angle + 90) * DEG2RAD) / 20);
+			RSoft_vector next = RSOFT_VECTOR2D(player.x + RSoft_cos(angle + 90) / 20, 
+											   player.y + RSoft_sin(angle + 90) / 20);
 
 			if (map[(size_t)((size_t)next.y * map_width) + (size_t)next.x] == 0)
 				player = next;
@@ -124,7 +124,7 @@ int main(void) {
 		for (size_t i = 0; i < win->r.w; i++) {
 			RSoft_vector ray = player;
 			rayAngle += (fov / win->r.w);
-
+			
 			while (map[(size_t)((size_t)ray.y * map_width) + (size_t)ray.x] == 0) {
 				ray.x += cos(rayAngle * DEG2RAD) / precision;
 				ray.y += sin(rayAngle * DEG2RAD) / precision;
@@ -142,8 +142,7 @@ int main(void) {
 			
 			float height = (win->r.h / 1) / dist;	
 
-
-			RSoft_setTexture(buffer, RSOFT_RECT(cos((rayAngle) * DEG2RAD) * w, 100, 1, height), RSOFT_AREA(w, h));
+			RSoft_setTexture(buffer, RSOFT_RECT(cos(rayAngle * DEG2RAD) * w, 100, 1, height), RSOFT_AREA(w, h));
 			RSoft_drawRectF(win->buffer, RSOFT_RECTF(i, win->r.h / 3.5, 1, height), (u8[4]){255, 255, 255, 255});	
 		}
 			

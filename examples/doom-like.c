@@ -80,30 +80,30 @@ int main(void) {
         } 
 			
 		if (RGFW_isPressed(win, RGFW_w)) {
-			RSoft_vector next = RSOFT_VECTOR3D(player.x - cos((angle + 90) * DEG2RAD), 
-											   player.y - sin((angle + 90) * DEG2RAD),
+			RSoft_vector next = RSOFT_VECTOR3D(player.x - RSoft_cos(angle + 90), 
+											   player.y - RSoft_sin(angle + 90),
 											   player.z);
 
 			player = next;
 		}
 		if (RGFW_isPressed(win, RGFW_s)){
-			RSoft_vector next = RSOFT_VECTOR3D(player.x + cos((angle + 90) * DEG2RAD), 
-											   player.y + sin((angle + 90) * DEG2RAD),
+			RSoft_vector next = RSOFT_VECTOR3D(player.x + RSoft_cos(angle + 90), 
+											   player.y + RSoft_sin(angle + 90),
 											   player.z);
 			player = next;
 		}
 
 		if (RGFW_isPressed(win, RGFW_a)) {
-			RSoft_vector next = RSOFT_VECTOR3D(player.x + cos((angle) * DEG2RAD), 
-											   player.y + sin((angle) * DEG2RAD),
+			RSoft_vector next = RSOFT_VECTOR3D(player.x + RSoft_cos(angle), 
+											   player.y + RSoft_sin(angle),
 											   player.z);
 
 			player = next;
 		}
 
 		if (RGFW_isPressed(win, RGFW_d)) {
-			RSoft_vector next = RSOFT_VECTOR3D(player.x - cos((angle) * DEG2RAD), 
-											   player.y - sin((angle) * DEG2RAD),
+			RSoft_vector next = RSOFT_VECTOR3D(player.x - RSoft_cos(angle), 
+											   player.y - RSoft_sin(angle),
 											   player.z);
 			
 			player = next;

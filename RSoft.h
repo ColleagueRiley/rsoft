@@ -169,6 +169,10 @@ typedef struct RSoft_rectF { float x, y, w, h; } RSoft_rectF;
 #define DEG2RAD M_PI/180
 #endif
 
+/* LUT based trig functions (uses degrees) */
+RSOFTDEF float RSoft_sin(i32 angle);
+RSOFTDEF float RSoft_cos(i32 angle);
+
  // 4 * 4 matrix
 typedef struct RSoft_matrix { float m[16];} RSoft_matrix;
 
@@ -216,6 +220,12 @@ RSOFTDEF void RSoft_drawLineF(u8* buffer, RSoft_vector start, RSoft_vector end, 
 #endif /* RSOFT_HEADER */
 
 #ifdef RSOFT_IMPLEMENTATION
+#ifdef __x86_64__
+#define RSOFT_X86
+#include <xmmintrin.h> 
+#include <x86intrin.h>
+#endif
+
 typedef struct RSoft_renderInfoStruct {
 	RSoft_area bufferSize;
 	RSoft_area canvasSize;
@@ -234,6 +244,37 @@ RSoft_renderInfoStruct RSoft_renderInfo = {.matrix = (RSoft_matrix) {{
     }},
 	.texture = NULL
 };
+
+float RSoft_sin(i32 angle) {
+	static float sinLUT[360] = {1};
+	if (sinLUT[0]) {
+		for (size_t i = 0; i < 360; i++)
+			sinLUT[i] = sin(i * DEG2RAD);
+	}
+
+	while (angle < 0) angle += 360;	
+
+	//printf("%i\n", angle);
+	if (angle >= 360)
+		angle -= 360 * (u32)(angle / 360);
+	
+	return sinLUT[angle];
+}
+
+float RSoft_cos(i32 angle) {
+	static float cosLUT[360] = {0};
+	if (cosLUT[0] == 0) {
+		for (size_t i = 0; i < 360; i++)
+			cosLUT[i] = cos(i * DEG2RAD);
+	}
+	
+	while (angle < 0) angle += 360;
+	
+	if (angle >= 360)
+		angle -= 360 * (u32)(angle / 360);
+
+	return cosLUT[angle];
+}
 
 void RSoft_setCanvasSize(RSoft_area area) {
 	RSoft_renderInfo.canvasSize = area;
@@ -299,8 +340,8 @@ RSoft_matrix RSoft_rotateMatrix(RSoft_matrix matrix, float angle, float x, float
 	}
 
 	/* Rotation matrix generation */
-	float sinres = sinf(DEG2RAD * angle);
-	float cosres = cosf(DEG2RAD * angle);
+	float sinres = RSoft_sin(angle);
+	float cosres = RSoft_cos(angle);
 	float t = 1.0f - cosres;
 
 	float rotateMatrix[16] = {
@@ -314,8 +355,8 @@ RSoft_matrix RSoft_rotateMatrix(RSoft_matrix matrix, float angle, float x, float
 }
 
 RSoft_matrix RSoft_simpleRotateMatrix(RSoft_matrix matrix, float angle) {
-	float sinres = sinf(DEG2RAD * angle);
-	float cosres = cosf(DEG2RAD * angle);
+	float sinres = RSoft_sin(angle);
+	float cosres = RSoft_cos(angle);
 	
 	/* this acts a 4 x 4 2D matrix */
 	float rotateMatrix[16] = {
@@ -458,11 +499,11 @@ void RSoft_drawPolygonF(u8* buffer, RSoft_rectF r, size_t angles, u8 color[4]) {
 	for (float i = 0; i < steps; i++) {
 		//RSoft_drawPolygonFOutline(buffer, RSOFT_RECTF(r.x, r.y + slopeY, r.w, r.h), angles, color);
 		for (size_t j = 0; j < angles; j++) {
-			float delta = (j * (360 / angles)) * DEG2RAD;
-			float delta2 = ((j + 1) * (360 / angles)) * DEG2RAD;
+			float delta = (j * (360 / angles));
+			float delta2 = ((j + 1) * (360 / angles));
 		
-			RSoft_vector p1 = RSOFT_VECTOR2D(r.x - (cos(delta) * r.w), r.y + (sin(delta) * r.h));
-			RSoft_vector p2 = RSOFT_VECTOR2D(r.x - (cos(delta2) * r.w), r.y + (sin(delta2) * r.h));
+			RSoft_vector p1 = RSOFT_VECTOR2D(r.x - (RSoft_cos(delta) * r.w), r.y + (RSoft_sin(delta) * r.h));
+			RSoft_vector p2 = RSOFT_VECTOR2D(r.x - (RSoft_cos(delta2) * r.w), r.y + (RSoft_sin(delta2) * r.h));
 			RSoft_point texPoint = RSOFT_POINT(abs((p1.x - (r.x - rect.w))), abs((p2.y - (r.y - rect.h))));
 
 
@@ -486,11 +527,11 @@ void RSoft_drawPolygonFOutline(u8* buffer, RSoft_rectF r, size_t angles, u8 colo
 	RSoft_renderInfoStruct info = RSoft_renderInfo;
 	
 	for (size_t i = 0; i < angles; i ++) {
-		float delta = (i * (360 / angles)) * DEG2RAD;
-		float delta2 = ((i + 1) * (360 / angles)) * DEG2RAD;
+		float delta = (i * (360 / angles));
+		float delta2 = ((i + 1) * (360 / angles)) ;
 		
-		RSoft_vector p1 = RSOFT_VECTOR2D(r.x - (cos(delta) * r.w), r.y + (sin(delta) * r.h));
-		RSoft_vector p2 = RSOFT_VECTOR2D(r.x - (cos(delta2) * r.w), r.y + (sin(delta2) * r.h));
+		RSoft_vector p1 = RSOFT_VECTOR2D(r.x - (RSoft_cos(delta) * r.w), r.y + (RSoft_sin(delta) * r.h));
+		RSoft_vector p2 = RSOFT_VECTOR2D(r.x - (RSoft_cos(delta2) * r.w), r.y + (RSoft_sin(delta2) * r.h));
 
 		//printf("%i\n", r.x - p1.x);
 		//u32 texColor = RSoft_textureGetColor(RSOFT_POINT(sqrt(pow(r.x - p1.x, 2)), sqrt(pow(r.y - p1.y, 2))), color);

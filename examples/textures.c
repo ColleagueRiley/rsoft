@@ -59,10 +59,10 @@ int main(void) {
 		
 		RSoft_setTexture(buffer, RSOFT_RECT(0, 0, 100, 100), RSOFT_AREA(w, h));
 		
-		RSoft_setMatrix(rotateAroundCenter(RSOFT_VECTOR2D(250, 650), angle));
+		RSoft_setMatrix(rotateAroundCenter(RSOFT_VECTOR2D(200, 600), angle));
 		RSoft_drawPolygonF(win->buffer, RSOFT_RECTF(200, 600, 100, 100), 6, (u8[4]){255, 225, 225, 255});
 		
-		RSoft_setMatrix(rotateAroundCenter(RSOFT_VECTOR2D(550, 650), angle));
+		RSoft_setMatrix(rotateAroundCenter(RSOFT_VECTOR2D(500, 600), angle));
 		RSoft_drawPolygonF(win->buffer, RSOFT_RECTF(500, 600, 100, 100), 360, (u8[4]){255, 225, 225, 255});
 
 		angle++;
