@@ -1,0 +1,8 @@
+- SIMD optimization
+- multithreading optimizations
+- raycaster (project textures properly)
+- RGBA blending
+- RSGL backend for RSoft
+- Font rendering with RFont 
+- fix doom-like controls
+- true 3D rendering
