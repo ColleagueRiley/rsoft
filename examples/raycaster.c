@@ -74,6 +74,11 @@ int main(void) {
 
 			if (win->event.type == RGFW_mousePosChanged) {
 				angle += (win->event.point.x / 15);	
+				if (angle >= 360)
+					angle -= 360;
+				if (angle < 0)
+					angle += 360;
+
 			}
 
 			if (win->event.type == RGFW_windowResized)
@@ -110,10 +115,17 @@ int main(void) {
 				player = next;
 		}
 
-		if (RGFW_isPressed(win, RGFW_Left))
-			angle -= 5;	
-		if (RGFW_isPressed(win, RGFW_Right))
+		if (RGFW_isPressed(win, RGFW_Left)) {
+			angle -= 5;
+;
+			if (angle < 0)
+				angle += 360;
+		}
+		if (RGFW_isPressed(win, RGFW_Right)) {
 			angle += 5;
+			if (angle >= 360)
+				angle -= 360;
+		}
 	
 
 		RSoft_setTexture(buffer, RSOFT_RECT(0, 0, 1, 1), RSOFT_AREA(w, h));
@@ -141,8 +153,19 @@ int main(void) {
 			dist += 1;
 			
 			float height = (win->r.h / 1) / dist;	
+			
+			if ((rayAngle >= -(fov / 2) && rayAngle <= (fov / 2)) || (rayAngle >= 300))
+				RSoft_setTexture(buffer, RSOFT_RECT(sin(rayAngle * DEG2RAD) * w, 100, 1, h), RSOFT_AREA(w, h));
+			
+			if (rayAngle >= 180 - (fov / 2) && rayAngle <= 180 + (fov / 2))
+				RSoft_setTexture(buffer, RSOFT_RECT(-sin(rayAngle * DEG2RAD) * w, 100, 1, h), RSOFT_AREA(w, h));
 
-			RSoft_setTexture(buffer, RSOFT_RECT(cos(rayAngle * DEG2RAD) * w, 100, 1, height), RSOFT_AREA(w, h));
+			if (rayAngle >= 90 - (fov / 2) && rayAngle <= 90 + (fov / 2))
+				RSoft_setTexture(buffer, RSOFT_RECT(-cos(rayAngle * DEG2RAD) * w, 100, 1, h), RSOFT_AREA(w, h));
+
+			if (rayAngle >= 220 && rayAngle <= 300)
+				RSoft_setTexture(buffer, RSOFT_RECT(cos(rayAngle * DEG2RAD) * w, 100, 1, h), RSOFT_AREA(w, h));
+
 			RSoft_drawRectF(win->buffer, RSOFT_RECTF(i, win->r.h / 3.5, 1, height), (u8[4]){255, 255, 255, 255});	
 		}
 			
@@ -150,8 +173,10 @@ int main(void) {
 		if (RGFW_isPressed(win, RGFW_Tab)) {
 			for (size_t y = 0; y < map_height; y++) {
 				for (size_t x = 0; x < map_width; x++) {
-					if (map[(y * map_width) + x])
+					if (map[(y * map_width) + x]) {
+						RSoft_setTexture(buffer, RSOFT_RECT(0, 0, 50, 50), RSOFT_AREA(w, h));
 						RSoft_drawRect(win->buffer, RSOFT_RECT(x * 50, y * 50, 50, 50), (u8[4]){255, 255, 255, 255});	
+					}
 				}
 			}
 
