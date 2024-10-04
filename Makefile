@@ -67,7 +67,7 @@ else ifeq ($(CC),emcc)
 	NO_VULKAN = 1
 	detected_OS = web
 
-	LIBS += --preload-file ./examples
+	LIBS += --use-preload-plugins
 else
 	LIBS += -std=c99 
 endif
