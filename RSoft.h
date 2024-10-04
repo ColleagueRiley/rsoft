@@ -219,8 +219,9 @@ RSOFTDEF void RSoft_drawLineF(u8* buffer, RSoft_vector start, RSoft_vector end, 
 
 #endif /* RSOFT_HEADER */
 
-#ifdef __x86_64__
 #ifdef RSOFT_IMPLEMENTATION
+
+#ifdef __x86_64__
 #define RSOFT_X86
 #include <xmmintrin.h> 
 #include <x86intrin.h>
