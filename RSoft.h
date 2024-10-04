@@ -219,8 +219,8 @@ RSOFTDEF void RSoft_drawLineF(u8* buffer, RSoft_vector start, RSoft_vector end, 
 
 #endif /* RSOFT_HEADER */
 
-#ifdef RSOFT_IMPLEMENTATION
 #ifdef __x86_64__
+#ifdef RSOFT_IMPLEMENTATION
 #define RSOFT_X86
 #include <xmmintrin.h> 
 #include <x86intrin.h>
@@ -254,7 +254,6 @@ float RSoft_sin(i32 angle) {
 
 	while (angle < 0) angle += 360;	
 
-	//printf("%i\n", angle);
 	if (angle >= 360)
 		angle -= 360 * (u32)(angle / 360);
 	
@@ -404,9 +403,9 @@ u32 RSoft_textureGetColor(RSoft_point texPoint, u8 color[4]) {
 	if (info.texture == NULL) 
 		return *((u32*)output);
 
-	info.texRect.x += texPoint.x * (info.textureArea.w / info.texRect.w); 
-	info.texRect.y += texPoint.y * (info.textureArea.h / info.texRect.h);
-	
+	info.texRect.x += texPoint.x / ((float)info.texRect.w / (float)info.textureArea.w); 
+	info.texRect.y += texPoint.y / ((float)info.texRect.h / (float)info.textureArea.h);
+
 	size_t index = (info.texRect.y * info.textureArea.w * 4) + info.texRect.x * 4; 
 	if (index > info.textureArea.w * info.textureArea.h * 4)
 		return *((u32*)output);
@@ -553,6 +552,15 @@ void RSoft_drawVector(u8* buffer, RSoft_vector v, u8 color[4]) {
 		return;
 	
 	int index = ((u32)v.y) * (4 * info.bufferSize.w) + (u32)v.x * 4;
+	if (color[3] != 255) {
+		float alpha = color[3] / 255;
+
+		color[0] = (color[0] * alpha) + ((1 - alpha) * buffer[index]);
+		color[1] =  (color[1] * alpha) + ((1 - alpha) * buffer[index + 1]);
+		color[2] =  (color[2] * alpha) + ((1 - alpha) * buffer[index + 2]);
+		color[3] =  (color[3] * alpha) + ((1 - alpha) * buffer[index + 3]);
+	}
+
     memcpy(buffer + index, color, 4 * sizeof(u8));
 }
 
