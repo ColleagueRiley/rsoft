@@ -53,7 +53,7 @@ int main(void) {
 		RSoft_setMatrix(rotateAroundCenter(RSOFT_VECTOR2D(500, 150), angle));
 		RSoft_drawTriangleF(win->buffer, (RSoft_vector[3]){v1, v2, v3}, (u8[4]){255, 225, 225, 255});
 
-		RSoft_setTexture(buffer, RSOFT_RECT(0, 100, 200, 200), RSOFT_AREA(w, h));
+		RSoft_setTexture(buffer, RSOFT_RECT(0, 0, 200, 200), RSOFT_AREA(w, h));
 		RSoft_setMatrix(rotateAroundCenter(RSOFT_VECTOR2D(250, 250), angle));
 		RSoft_drawRectF(win->buffer, RSOFT_RECTF(150, 150, 200, 200), (u8[4]){255, 225, 225, 255}); 
 		
