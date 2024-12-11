@@ -87,7 +87,7 @@ void RFont_render_legacy(u8 legacy) { }
 
 
 int main(void) {
-    win = RGFW_createWindow("Basic buffer example", RGFW_RECT(0, 0, 800, 800), RGFW_CENTER | RGFW_TRANSPARENT_WINDOW);
+    win = RGFW_createWindow("Basic buffer example", RGFW_RECT(0, 0, 800, 500), RGFW_CENTER | RGFW_TRANSPARENT_WINDOW);
    
     RFont_init(win->r.w, win->r.h);
     RFont_font* font = RFont_font_init("DejaVuSans.ttf");

@@ -22,7 +22,7 @@ RSoft_matrix rotateAroundCenter(RSoft_vector center, float angle) {
 }
 
 int main(void) {
-    RGFW_window* win = RGFW_createWindow("Textures example", RGFW_RECT(0, 0, 800, 800), RGFW_CENTER | RGFW_TRANSPARENT_WINDOW);
+    RGFW_window* win = RGFW_createWindow("Textures example", RGFW_RECT(0, 0, 800, 500), RGFW_CENTER | RGFW_TRANSPARENT_WINDOW);
     
     RSoft_setBufferSize(RGFW_getScreenSize());
     RSoft_setCanvasSize(RGFW_AREA(win->r.w, win->r.h));
@@ -50,20 +50,20 @@ int main(void) {
 		RSoft_vector v3 = RSOFT_VECTOR2D(600, 200);
 
 		RSoft_setTexture(buffer, RSOFT_RECT(0, 100, 200, 100), RSOFT_AREA(w, h));
-		RSoft_setMatrix(rotateAroundCenter(RSOFT_VECTOR2D(500, 150), angle));
+		RSoft_setMatrix(rotateAroundCenter(RSOFT_VECTOR2D(500, 50), angle));
 		RSoft_drawTriangleF(win->buffer, (RSoft_vector[3]){v1, v2, v3}, (u8[4]){255, 225, 225, 255});
 
 		RSoft_setTexture(buffer, RSOFT_RECT(0, 0, 200, 200), RSOFT_AREA(w, h));
 		RSoft_setMatrix(rotateAroundCenter(RSOFT_VECTOR2D(250, 250), angle));
-		RSoft_drawRectF(win->buffer, RSOFT_RECTF(150, 150, 200, 200), (u8[4]){255, 225, 225, 255}); 
+		RSoft_drawRectF(win->buffer, RSOFT_RECTF(150, 100, 200, 200), (u8[4]){255, 225, 225, 255}); 
 		
 		RSoft_setTexture(buffer, RSOFT_RECT(0, 0, 100, 100), RSOFT_AREA(w, h));
 		
-		RSoft_setMatrix(rotateAroundCenter(RSOFT_VECTOR2D(200, 600), angle));
-		RSoft_drawPolygonF(win->buffer, RSOFT_RECTF(200, 600, 100, 100), 6, (u8[4]){255, 225, 225, 255});
+		RSoft_setMatrix(rotateAroundCenter(RSOFT_VECTOR2D(200, win->r.h - 100), angle));
+		RSoft_drawPolygonF(win->buffer, RSOFT_RECTF(200, win->r.h - 100, 100, 100), 6, (u8[4]){255, 225, 225, 255});
 		
-		RSoft_setMatrix(rotateAroundCenter(RSOFT_VECTOR2D(500, 600), angle));
-		RSoft_drawPolygonF(win->buffer, RSOFT_RECTF(500, 600, 100, 100), 360, (u8[4]){255, 225, 225, 255});
+		RSoft_setMatrix(rotateAroundCenter(RSOFT_VECTOR2D(500, win->r.h - 100), angle));
+		RSoft_drawPolygonF(win->buffer, RSOFT_RECTF(500, win->r.h - 100, 100, 100), 360, (u8[4]){255, 225, 225, 255});
 
 		angle++;
 		RGFW_window_swapBuffers(win);
