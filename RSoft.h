@@ -618,63 +618,88 @@ void RSoft_drawTriangle(u8* buffer, const RSoft_point points[3], u8 color[4]) {
 }
 
 
+void RSoft_vectorSwap(RSoft_vector* v1, RSoft_vector* v2) {
+	RSoft_vector save = *v1;
+	*v1 = *v2;
+	*v2 = *(&save);
+}
+
 void RSoft_drawTriangleF(u8* buffer, const RSoft_vector points[3], u8 color[4]) {	
 	RSoft_renderInfoStruct info = RSoft_renderInfo;
 	
-	RSoft_vector lowest = RSOFT_VECTOR2D(-1, -1);
-	RSoft_vector highest = RSOFT_VECTOR2D(-1, -1);
-	
-	for (size_t i = 0; i < 3; i++) {
-		if (lowest.x == -1 || lowest.x > points[i].x)
-			lowest.x = points[i].x;
-		if (lowest.y == -1 || lowest.y > points[i].x)
-			lowest.y = points[i].y;
+	/* source from 
+		https://github.com/itsYakub/Silk/blob/c996bdb9f42407dcf9cfcc6b6b9b0046261f9f02/silk.h#L1619
+	*/
 
-		if (highest.x == -1 || highest.x < points[i].x)
-			highest.x = points[i].x;
-		if (highest.y == -1 || highest.y < points[i].x)
-			highest.y = points[i].y;
-	}
+    if(points[0].y > points[1].y) RSoft_vectorSwap((RSoft_vector*)points + 0, (RSoft_vector*)points + 1);
+    if(points[0].y > points[2].y) RSoft_vectorSwap((RSoft_vector*)points + 0, (RSoft_vector*)points + 2);
+    if(points[1].y > points[2].y) RSoft_vectorSwap((RSoft_vector*)points + 1, (RSoft_vector*)points + 2);
 
-	RSoft_vector center = RSOFT_VECTOR2D((lowest.x + highest.x) / 2, (lowest.y + highest.y) / 2);
-	
-	RSoft_vector nPoints[3] = {RSOFT_VECTOR2D(points[0].x, points[0].y), 
-							   RSOFT_VECTOR2D(points[1].x, points[1].y), 
-							   RSOFT_VECTOR2D(points[2].x, points[2].y)};
-	
-	float slopeX[3] = {0, 0, 0};
-	float slopeY[3] = {0, 0, 0};
-	
-	float steps = 0;
-	for (size_t j = 0; j < 3; j++) {
-		slopeX[j] =  points[j].x - center.x;  
-		slopeY[j] = points[j].y - center.y;
+    RSoft_vector delta_vector_ab = {
+        points[1].x - points[0].x,
+        points[1].y - points[0].y
+    };
+
+    RSoft_vector delta_vector_ac = {
+        points[2].x - points[0].x,
+        points[2].y - points[0].y
+    };
+
+    RSoft_vector delta_vector_cb = {
+        points[1].x - points[2].x,
+        points[1].y - points[2].y
+    };
+
+    RSoft_vector delta_vector_ca = {
+        points[0].x - points[2].x,
+        points[0].y - points[2].y
+    };
+
+    for(float y = points[0].y; y < points[1].y; y++) {
+		if(y < 0 || y > info.bufferSize.h)
+			continue;
 		
-		if (fabs(slopeX[j]) > steps) 
-			steps = slopeX[j];
+		float s1 = delta_vector_ab.y != 0 ?
+			(y - points[0].y) * delta_vector_ab.x / delta_vector_ab.y + points[0].x :
+			points[0].x;
+
+		float s2 = delta_vector_ac.y != 0 ?
+			(y - points[0].y) * delta_vector_ac.x / delta_vector_ac.y + points[0].x :
+			points[0].x;
+
+		if(s1 > s2) {
+			float b = s1;
+			s1 = s2;
+			s2 = b;
+		}
+
+		for(float x = s1; x <= s2; x++) {
+			u32 texColor = RSoft_textureGetColor(RSOFT_POINT(x - s1, y - points[1].y), color);
+			RSoft_drawVector(buffer, RSOFT_VECTOR2D(x, y), (u8*)(&texColor));
+		}
+    }
+
+    for(i32 y = points[1].y; y < points[2].y; y++) {
+        if(y < 0 || y > info.bufferSize.h)
+			continue;
 		
-		if (fabs(slopeY[j]) >= fabs(slopeX[j]) && fabs(slopeY[j]) > steps)
-			steps = slopeY[j];
-		
-		slopeX[j] /= steps;
-		slopeY[j] /= steps;
-	}
+		i32 s1 = delta_vector_cb.y != 0 ?
+			(y - points[2].y) * delta_vector_cb.x / delta_vector_cb.y + points[2].x :
+			points[2].x;
 
-	for (float i = 0; i < steps; i++) {
-		//RSoft_drawTriangleOutlineF(buffer, nPoints, color);
-		u32 texColor = RSoft_textureGetColor(RSOFT_POINT(abs(nPoints[1].x - nPoints[0].x),  abs(nPoints[1].y - nPoints[0].y)), color);
-		RSoft_drawLineF(buffer, nPoints[0], nPoints[1], (u8*)&texColor);
+		i32 s2 = delta_vector_ca.y != 0 ?
+			(y - points[2].y) * delta_vector_ca.x / delta_vector_ca.y + points[2].x :
+			points[2].x;
 
-		texColor = RSoft_textureGetColor(RSOFT_POINT(abs(nPoints[1].x - nPoints[2].x) + slopeX[0],  
-													 abs(nPoints[2].y - nPoints[1].y) + slopeY[0]), color);
-		RSoft_drawLineF(buffer, nPoints[1], nPoints[2], (u8*)&texColor);
+		if(s1 > s2) {
+			float b = s1;
+			s1 = s2;
+			s2 = b;
+		}
 
-		texColor = RSoft_textureGetColor(RSOFT_POINT(abs(nPoints[2].x - nPoints[0].x) + slopeX[1], 
-													 abs(nPoints[2].y - nPoints[0].y) + slopeY[1]), color);
-		RSoft_drawLineF(buffer, nPoints[2], nPoints[0], (u8*)&texColor);		
-		for (size_t j = 0; j < 3; j++) {
-			nPoints[j].x -= slopeX[j];
-			nPoints[j].y -= slopeY[j];
+		for(i32 x = s1; x <= s2; x++) {
+			u32 texColor = RSoft_textureGetColor(RSOFT_POINT(x - s1, y - points[1].y), color);
+			RSoft_drawVector(buffer, RSOFT_VECTOR2D(x, y), (u8*)(&texColor));
 		}
 	}
 }
