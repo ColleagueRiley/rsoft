@@ -133,30 +133,30 @@ Module['FS_createPath']("/.git/logs/refs/remotes", "origin", true, true);
 Module['FS_createPath']("/.git", "objects", true, true);
 Module['FS_createPath']("/.git/objects", "0e", true, true);
 Module['FS_createPath']("/.git/objects", "14", true, true);
-Module['FS_createPath']("/.git/objects", "1a", true, true);
+Module['FS_createPath']("/.git/objects", "27", true, true);
+Module['FS_createPath']("/.git/objects", "2c", true, true);
 Module['FS_createPath']("/.git/objects", "41", true, true);
-Module['FS_createPath']("/.git/objects", "43", true, true);
-Module['FS_createPath']("/.git/objects", "4d", true, true);
 Module['FS_createPath']("/.git/objects", "53", true, true);
+Module['FS_createPath']("/.git/objects", "55", true, true);
 Module['FS_createPath']("/.git/objects", "5a", true, true);
 Module['FS_createPath']("/.git/objects", "5e", true, true);
-Module['FS_createPath']("/.git/objects", "68", true, true);
+Module['FS_createPath']("/.git/objects", "65", true, true);
 Module['FS_createPath']("/.git/objects", "7d", true, true);
 Module['FS_createPath']("/.git/objects", "8b", true, true);
-Module['FS_createPath']("/.git/objects", "8c", true, true);
 Module['FS_createPath']("/.git/objects", "94", true, true);
+Module['FS_createPath']("/.git/objects", "9b", true, true);
+Module['FS_createPath']("/.git/objects", "a5", true, true);
 Module['FS_createPath']("/.git/objects", "a6", true, true);
 Module['FS_createPath']("/.git/objects", "af", true, true);
 Module['FS_createPath']("/.git/objects", "bd", true, true);
+Module['FS_createPath']("/.git/objects", "c3", true, true);
 Module['FS_createPath']("/.git/objects", "c9", true, true);
 Module['FS_createPath']("/.git/objects", "ce", true, true);
-Module['FS_createPath']("/.git/objects", "d1", true, true);
 Module['FS_createPath']("/.git/objects", "d5", true, true);
-Module['FS_createPath']("/.git/objects", "e3", true, true);
+Module['FS_createPath']("/.git/objects", "e0", true, true);
 Module['FS_createPath']("/.git/objects", "e6", true, true);
 Module['FS_createPath']("/.git/objects", "eb", true, true);
 Module['FS_createPath']("/.git/objects", "f1", true, true);
-Module['FS_createPath']("/.git/objects", "f6", true, true);
 Module['FS_createPath']("/.git/objects", "f7", true, true);
 Module['FS_createPath']("/.git/objects", "fa", true, true);
 Module['FS_createPath']("/.git", "refs", true, true);
@@ -233,7 +233,7 @@ Module['FS_createPath']("/", "examples", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/.git/FETCH_HEAD", "start": 0, "end": 128}, {"filename": "/.git/HEAD", "start": 128, "end": 149}, {"filename": "/.git/config", "start": 149, "end": 566}, {"filename": "/.git/description", "start": 566, "end": 639}, {"filename": "/.git/hooks/applypatch-msg.sample", "start": 639, "end": 1117}, {"filename": "/.git/hooks/commit-msg.sample", "start": 1117, "end": 2013}, {"filename": "/.git/hooks/fsmonitor-watchman.sample", "start": 2013, "end": 6739}, {"filename": "/.git/hooks/post-update.sample", "start": 6739, "end": 6928}, {"filename": "/.git/hooks/pre-applypatch.sample", "start": 6928, "end": 7352}, {"filename": "/.git/hooks/pre-commit.sample", "start": 7352, "end": 9001}, {"filename": "/.git/hooks/pre-merge-commit.sample", "start": 9001, "end": 9417}, {"filename": "/.git/hooks/pre-push.sample", "start": 9417, "end": 10791}, {"filename": "/.git/hooks/pre-rebase.sample", "start": 10791, "end": 15689}, {"filename": "/.git/hooks/pre-receive.sample", "start": 15689, "end": 16233}, {"filename": "/.git/hooks/prepare-commit-msg.sample", "start": 16233, "end": 17725}, {"filename": "/.git/hooks/push-to-checkout.sample", "start": 17725, "end": 20508}, {"filename": "/.git/hooks/sendemail-validate.sample", "start": 20508, "end": 22816}, {"filename": "/.git/hooks/update.sample", "start": 22816, "end": 26466}, {"filename": "/.git/index", "start": 26466, "end": 28728}, {"filename": "/.git/info/exclude", "start": 28728, "end": 28968}, {"filename": "/.git/logs/HEAD", "start": 28968, "end": 29186}, {"filename": "/.git/logs/refs/heads/main", "start": 29186, "end": 29413}, {"filename": "/.git/logs/refs/remotes/origin/main", "start": 29413, "end": 29750}, {"filename": "/.git/objects/0e/491f6066e2beb3e16fcba2007b7b274fb1b9a6", "start": 29750, "end": 31616}, {"filename": "/.git/objects/14/60cee34b658ea04936fff7449c024775fc4ad4", "start": 31616, "end": 32532}, {"filename": "/.git/objects/1a/12c6250f3c2ff139f1a4c3fcb2a30c9faca705", "start": 32532, "end": 33932}, {"filename": "/.git/objects/41/53a179623633360c8126a24d09a769bbcded3c", "start": 33932, "end": 34426}, {"filename": "/.git/objects/43/829129fa7307ca3f42246443dde9fab4d099ad", "start": 34426, "end": 34888}, {"filename": "/.git/objects/4d/87f56e5fd499a1b666237b981070c3e457d168", "start": 34888, "end": 35283}, {"filename": "/.git/objects/53/d6bbaf9307c2ed1f5922382e55fd267d6eeae8", "start": 35283, "end": 35618}, {"filename": "/.git/objects/5a/66932a94dbea89753f39cdebf536200411edf4", "start": 35618, "end": 119172}, {"filename": "/.git/objects/5e/d13980bb60ac705d14b2ad101358a6f9996553", "start": 119172, "end": 143746}, {"filename": "/.git/objects/68/c1d842773e0ecab7a4abaacdb9b87be8e5494d", "start": 143746, "end": 144663}, {"filename": "/.git/objects/7d/067c6c36e8309c7b1bdcb7856992734adaa44f", "start": 144663, "end": 144826}, {"filename": "/.git/objects/8b/8721151861f97daa08a19117b5ecf936c4bc26", "start": 144826, "end": 145742}, {"filename": "/.git/objects/8c/4e6482a39e45980455c3d67e8ce5c4cb133860", "start": 145742, "end": 146570}, {"filename": "/.git/objects/94/51882870cf70be6cc03492dedf5cda08373a20", "start": 146570, "end": 152802}, {"filename": "/.git/objects/a6/df3be03d203b5512a3fbf45f5ef744cac58081", "start": 152802, "end": 451914}, {"filename": "/.git/objects/af/8f7125706d1be4f779f1e25891fdfd7cf04b45", "start": 451914, "end": 451966}, {"filename": "/.git/objects/bd/23dad6e7eeb0460b99639219dfb6229e924e50", "start": 451966, "end": 452881}, {"filename": "/.git/objects/c9/cb292d522a6a3db91b92b0c363df073ba596bf", "start": 452881, "end": 487692}, {"filename": "/.git/objects/ce/653a319e4bfe267f249593914525aede494c0c", "start": 487692, "end": 488609}, {"filename": "/.git/objects/d1/c6f034e14cf2a2b1d87a8acb250dd5059190bf", "start": 488609, "end": 490027}, {"filename": "/.git/objects/d5/782190e1855f0b30cf1f8bd6cd18ec5fbea3ba", "start": 490027, "end": 490994}, {"filename": "/.git/objects/e3/c3d59e402e6aa85e06bb0126c494530e9c41b3", "start": 490994, "end": 491786}, {"filename": "/.git/objects/e6/9b02fda1a77ea7dd314a008a941d20bea7d8db", "start": 491786, "end": 492267}, {"filename": "/.git/objects/eb/3089deb84fb3f6808821c19a1661c3505d0dbe", "start": 492267, "end": 531504}, {"filename": "/.git/objects/f1/24e13e577f742ea9a24aad4ed9f301db2de7f5", "start": 531504, "end": 570202}, {"filename": "/.git/objects/f6/2f2c2b23fcae40613a03c63ef0d7540d602d3a", "start": 570202, "end": 655315}, {"filename": "/.git/objects/f7/129e90ae35c48ae2c3244c5cad023192924106", "start": 655315, "end": 656463}, {"filename": "/.git/objects/fa/d4b4b5b9d3916d9812eae757f00eeea83ad51b", "start": 656463, "end": 656515}, {"filename": "/.git/refs/heads/main", "start": 656515, "end": 656556}, {"filename": "/.git/refs/remotes/origin/main", "start": 656556, "end": 656597}, {"filename": "/.git/shallow", "start": 656597, "end": 656638}, {"filename": "/.github/workflows/web.yml", "start": 656638, "end": 657201}, {"filename": "/LICENSE", "start": 657201, "end": 658077}, {"filename": "/Makefile", "start": 658077, "end": 660409}, {"filename": "/README.md", "start": 660409, "end": 661806}, {"filename": "/RSoft.h", "start": 661806, "end": 683855}, {"filename": "/RSoft_logo.png", "start": 683855, "end": 726050}, {"filename": "/TODO", "start": 726050, "end": 726256}, {"filename": "/examples/RFont.h", "start": 726256, "end": 846833}, {"filename": "/examples/RGFW.h", "start": 846833, "end": 1137399}, {"filename": "/examples/doom-like.c", "start": 1137399, "end": 1141801}, {"filename": "/examples/doom-like.data", "start": 1141801, "end": 23952690}, {"filename": "/examples/doom-like.html", "start": 23952690, "end": 23954530}, {"filename": "/examples/doom-like.js", "start": 23954530, "end": 24434702}, {"filename": "/examples/doom-like.wasm", "start": 24434702, "end": 24978672}, {"filename": "/examples/raycaster.c", "start": 24978672, "end": 24985212}, {"filename": "/examples/raycaster.data", "start": 24985212, "end": 35882639}, {"filename": "/examples/raycaster.html", "start": 35882639, "end": 35884479}, {"filename": "/examples/raycaster.js", "start": 35884479, "end": 36365615}, {"filename": "/examples/raycaster.wasm", "start": 36365615, "end": 36900514}, {"filename": "/examples/shapes.c", "start": 36900514, "end": 36902619}, {"filename": "/examples/shapes.data", "start": 36902619, "end": 39081229}, {"filename": "/examples/shapes.html", "start": 39081229, "end": 39083063}, {"filename": "/examples/shapes.js", "start": 39083063, "end": 39562031}, {"filename": "/examples/shapes.wasm", "start": 39562031, "end": 39665560}, {"filename": "/examples/stb_image.h", "start": 39665560, "end": 39944912}, {"filename": "/examples/tex.jpg", "start": 39944912, "end": 39969520}, {"filename": "/examples/text.c", "start": 39969520, "end": 39972992}, {"filename": "/examples/textures.c", "start": 39972992, "end": 39975492}, {"filename": "/examples/textures.data", "start": 39975492, "end": 44915209}, {"filename": "/examples/textures.html", "start": 44915209, "end": 44917047}, {"filename": "/examples/textures.js", "start": 44917047, "end": 45396719}, {"filename": "/examples/textures.wasm", "start": 45396719, "end": 45935040}, {"filename": "/examples/wall.jpg", "start": 45935040, "end": 45976267}, {"filename": "/examples/wall2.jpg", "start": 45976267, "end": 46276827}, {"filename": "/index.html", "start": 46276827, "end": 46279525}, {"filename": "/tex.jpg", "start": 46279525, "end": 46304133}, {"filename": "/wall.jpg", "start": 46304133, "end": 46345360}, {"filename": "/wall2.jpg", "start": 46345360, "end": 46645920}], "remote_package_size": 46645920});
+    loadPackage({"files": [{"filename": "/.git/FETCH_HEAD", "start": 0, "end": 128}, {"filename": "/.git/HEAD", "start": 128, "end": 149}, {"filename": "/.git/config", "start": 149, "end": 566}, {"filename": "/.git/description", "start": 566, "end": 639}, {"filename": "/.git/hooks/applypatch-msg.sample", "start": 639, "end": 1117}, {"filename": "/.git/hooks/commit-msg.sample", "start": 1117, "end": 2013}, {"filename": "/.git/hooks/fsmonitor-watchman.sample", "start": 2013, "end": 6739}, {"filename": "/.git/hooks/post-update.sample", "start": 6739, "end": 6928}, {"filename": "/.git/hooks/pre-applypatch.sample", "start": 6928, "end": 7352}, {"filename": "/.git/hooks/pre-commit.sample", "start": 7352, "end": 9001}, {"filename": "/.git/hooks/pre-merge-commit.sample", "start": 9001, "end": 9417}, {"filename": "/.git/hooks/pre-push.sample", "start": 9417, "end": 10791}, {"filename": "/.git/hooks/pre-rebase.sample", "start": 10791, "end": 15689}, {"filename": "/.git/hooks/pre-receive.sample", "start": 15689, "end": 16233}, {"filename": "/.git/hooks/prepare-commit-msg.sample", "start": 16233, "end": 17725}, {"filename": "/.git/hooks/push-to-checkout.sample", "start": 17725, "end": 20508}, {"filename": "/.git/hooks/sendemail-validate.sample", "start": 20508, "end": 22816}, {"filename": "/.git/hooks/update.sample", "start": 22816, "end": 26466}, {"filename": "/.git/index", "start": 26466, "end": 28728}, {"filename": "/.git/info/exclude", "start": 28728, "end": 28968}, {"filename": "/.git/logs/HEAD", "start": 28968, "end": 29139}, {"filename": "/.git/logs/refs/heads/main", "start": 29139, "end": 29319}, {"filename": "/.git/logs/refs/remotes/origin/main", "start": 29319, "end": 29609}, {"filename": "/.git/objects/0e/ebc8e1b6902619c6665ba25c03af2a58a0f674", "start": 29609, "end": 31475}, {"filename": "/.git/objects/14/60cee34b658ea04936fff7449c024775fc4ad4", "start": 31475, "end": 32391}, {"filename": "/.git/objects/27/353e9b35b9c003905173b6f3dc7ed8e144d61e", "start": 32391, "end": 32852}, {"filename": "/.git/objects/2c/4bf15653836d895a33a1d0505d9341c1cfcc9e", "start": 32852, "end": 34254}, {"filename": "/.git/objects/41/53a179623633360c8126a24d09a769bbcded3c", "start": 34254, "end": 34748}, {"filename": "/.git/objects/53/d6bbaf9307c2ed1f5922382e55fd267d6eeae8", "start": 34748, "end": 35083}, {"filename": "/.git/objects/55/cf6cfb0c0bac14bd7bea1584d514efd5490120", "start": 35083, "end": 36501}, {"filename": "/.git/objects/5a/66932a94dbea89753f39cdebf536200411edf4", "start": 36501, "end": 120055}, {"filename": "/.git/objects/5e/d13980bb60ac705d14b2ad101358a6f9996553", "start": 120055, "end": 144629}, {"filename": "/.git/objects/65/4efa532bd1a2d2bdeb26aef8591f664973da06", "start": 144629, "end": 145426}, {"filename": "/.git/objects/7d/067c6c36e8309c7b1bdcb7856992734adaa44f", "start": 145426, "end": 145589}, {"filename": "/.git/objects/8b/8721151861f97daa08a19117b5ecf936c4bc26", "start": 145589, "end": 146505}, {"filename": "/.git/objects/94/51882870cf70be6cc03492dedf5cda08373a20", "start": 146505, "end": 152737}, {"filename": "/.git/objects/9b/4c01b9aa32baa2dce0816ca91ec9867c70f528", "start": 152737, "end": 153132}, {"filename": "/.git/objects/a5/b378c0e0123167ebdc1b15d3491397e17cda9f", "start": 153132, "end": 153302}, {"filename": "/.git/objects/a6/df3be03d203b5512a3fbf45f5ef744cac58081", "start": 153302, "end": 452414}, {"filename": "/.git/objects/af/8f7125706d1be4f779f1e25891fdfd7cf04b45", "start": 452414, "end": 452466}, {"filename": "/.git/objects/bd/23dad6e7eeb0460b99639219dfb6229e924e50", "start": 452466, "end": 453381}, {"filename": "/.git/objects/c3/1a167d4e0c0689b9951544a13381b6a5e39d3f", "start": 453381, "end": 541099}, {"filename": "/.git/objects/c9/cb292d522a6a3db91b92b0c363df073ba596bf", "start": 541099, "end": 575910}, {"filename": "/.git/objects/ce/653a319e4bfe267f249593914525aede494c0c", "start": 575910, "end": 576827}, {"filename": "/.git/objects/d5/782190e1855f0b30cf1f8bd6cd18ec5fbea3ba", "start": 576827, "end": 577794}, {"filename": "/.git/objects/e0/a69c14e3f3297bb57fb6e4e2fbf8efe8eb8ff5", "start": 577794, "end": 578719}, {"filename": "/.git/objects/e6/9b02fda1a77ea7dd314a008a941d20bea7d8db", "start": 578719, "end": 579200}, {"filename": "/.git/objects/eb/3089deb84fb3f6808821c19a1661c3505d0dbe", "start": 579200, "end": 618437}, {"filename": "/.git/objects/f1/24e13e577f742ea9a24aad4ed9f301db2de7f5", "start": 618437, "end": 657135}, {"filename": "/.git/objects/f7/129e90ae35c48ae2c3244c5cad023192924106", "start": 657135, "end": 658283}, {"filename": "/.git/objects/fa/d4b4b5b9d3916d9812eae757f00eeea83ad51b", "start": 658283, "end": 658335}, {"filename": "/.git/refs/heads/main", "start": 658335, "end": 658376}, {"filename": "/.git/refs/remotes/origin/main", "start": 658376, "end": 658417}, {"filename": "/.git/shallow", "start": 658417, "end": 658458}, {"filename": "/.github/workflows/web.yml", "start": 658458, "end": 659021}, {"filename": "/LICENSE", "start": 659021, "end": 659897}, {"filename": "/Makefile", "start": 659897, "end": 662229}, {"filename": "/README.md", "start": 662229, "end": 663626}, {"filename": "/RSoft.h", "start": 663626, "end": 685675}, {"filename": "/RSoft_logo.png", "start": 685675, "end": 727870}, {"filename": "/TODO", "start": 727870, "end": 728076}, {"filename": "/examples/RFont.h", "start": 728076, "end": 848653}, {"filename": "/examples/RGFW.h", "start": 848653, "end": 1147752}, {"filename": "/examples/doom-like.c", "start": 1147752, "end": 1152154}, {"filename": "/examples/doom-like.data", "start": 1152154, "end": 24143223}, {"filename": "/examples/doom-like.html", "start": 24143223, "end": 24145063}, {"filename": "/examples/doom-like.js", "start": 24145063, "end": 24636461}, {"filename": "/examples/doom-like.wasm", "start": 24636461, "end": 25182654}, {"filename": "/examples/raycaster.c", "start": 25182654, "end": 25189194}, {"filename": "/examples/raycaster.data", "start": 25189194, "end": 36169970}, {"filename": "/examples/raycaster.html", "start": 36169970, "end": 36171810}, {"filename": "/examples/raycaster.js", "start": 36171810, "end": 36664204}, {"filename": "/examples/raycaster.wasm", "start": 36664204, "end": 37201327}, {"filename": "/examples/shapes.c", "start": 37201327, "end": 37203472}, {"filename": "/examples/shapes.data", "start": 37203472, "end": 39392518}, {"filename": "/examples/shapes.html", "start": 39392518, "end": 39394352}, {"filename": "/examples/shapes.js", "start": 39394352, "end": 39884546}, {"filename": "/examples/shapes.wasm", "start": 39884546, "end": 39990723}, {"filename": "/examples/stb_image.h", "start": 39990723, "end": 40270075}, {"filename": "/examples/tex.jpg", "start": 40270075, "end": 40294683}, {"filename": "/examples/text.c", "start": 40294683, "end": 40298155}, {"filename": "/examples/textures.c", "start": 40298155, "end": 40300698}, {"filename": "/examples/textures.data", "start": 40300698, "end": 45275161}, {"filename": "/examples/textures.html", "start": 45275161, "end": 45276999}, {"filename": "/examples/textures.js", "start": 45276999, "end": 45767897}, {"filename": "/examples/textures.wasm", "start": 45767897, "end": 46308849}, {"filename": "/examples/wall.jpg", "start": 46308849, "end": 46350076}, {"filename": "/examples/wall2.jpg", "start": 46350076, "end": 46650636}, {"filename": "/index.html", "start": 46650636, "end": 46653334}, {"filename": "/tex.jpg", "start": 46653334, "end": 46677942}, {"filename": "/wall.jpg", "start": 46677942, "end": 46719169}, {"filename": "/wall2.jpg", "start": 46719169, "end": 47019729}], "remote_package_size": 47019729});
 
   })();
 
@@ -1222,12 +1222,13 @@ function dbg(text) {
 // === Body ===
 
 var ASM_CONSTS = {
-  67508: () => { Module.useWebGL = true; GLImmediate.init(); },  
- 67554: () => { var canvas = document.getElementById('canvas'); canvas.addEventListener('drop', function(e) { e.preventDefault(); if (e.dataTransfer.file < 0) return; var filenamesArray = []; var count = e.dataTransfer.files.length; var drop_dir = '.rgfw_dropped_files'; Module._RGFW_mkdir(drop_dir); for (var i = 0; i < count; i++) { var file = e.dataTransfer.files[i]; var path = '/' + drop_dir + '/' + file.name.replace("//", '_'); var reader = new FileReader(); reader.onloadend = (e) => { if (reader.readyState != 2) { out('failed to read dropped file: '+file.name+': '+reader.error); } else { var data = e.target.result; _RGFW_writeFile(path, new Uint8Array(data), file.size); } }; reader.readAsArrayBuffer(file); var filename = stringToNewUTF8(path); filenamesArray.push(filename); Module._RGFW_makeSetValue(i, filename); } Module._Emscripten_onDrop(count); for (var i = 0; i < count; ++i) { _free(filenamesArray[i]); } }, true); canvas.addEventListener('dragover', function(e) { e.preventDefault(); return false; }, true); },  
- 68573: () => { return window.innerWidth; },  
- 68603: () => { return window.innerHeight; },  
- 68634: () => { document.getElementById('canvas').style.cursor = 'none'; },  
- 68691: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); }
+  67508: () => { Module.canvas.focus(); },  
+ 67533: () => { return window.innerWidth; },  
+ 67563: () => { return window.innerHeight; },  
+ 67594: () => { Module.useWebGL = true; GLImmediate.init(); },  
+ 67640: () => { var canvas = document.getElementById('canvas'); canvas.addEventListener('drop', function(e) { e.preventDefault(); if (e.dataTransfer.file < 0) return; var filenamesArray = []; var count = e.dataTransfer.files.length; var drop_dir = '.rgfw_dropped_files'; Module._RGFW_mkdir(drop_dir); for (var i = 0; i < count; i++) { var file = e.dataTransfer.files[i]; var path = '/' + drop_dir + '/' + file.name.replace("//", '_'); var reader = new FileReader(); reader.onloadend = (e) => { if (reader.readyState != 2) { out('failed to read dropped file: '+file.name+': '+reader.error); } else { var data = e.target.result; _RGFW_writeFile(path, new Uint8Array(data), file.size); } }; reader.readAsArrayBuffer(file); var filename = stringToNewUTF8(path); filenamesArray.push(filename); Module._RGFW_makeSetValue(i, filename); } Module._Emscripten_onDrop(count); for (var i = 0; i < count; ++i) { _free(filenamesArray[i]); } }, true); canvas.addEventListener('dragover', function(e) { e.preventDefault(); return false; }, true); },  
+ 68659: () => { document.getElementById('canvas').style.cursor = 'none'; },  
+ 68716: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); }
 };
 
 
@@ -4577,19 +4578,13 @@ var ASM_CONSTS = {
 
   var _emscripten_memcpy_js = (dest, src, num) => HEAPU8.copyWithin(dest, src, src + num);
 
-  var getHeapMax = () =>
-      HEAPU8.length;
   
-  var abortOnCannotGrowMemory = (requestedSize) => {
-      abort(`Cannot enlarge memory arrays to size ${requestedSize} bytes (OOM). Either (1) compile with -sINITIAL_MEMORY=X with X higher than the current value ${HEAP8.length}, (2) compile with -sALLOW_MEMORY_GROWTH which allows increasing the size at runtime, or (3) if you want malloc to return NULL (0) instead of this abort, compile with -sABORTING_MALLOC=0`);
+  var setLetterbox = (element, topBottom, leftRight) => {
+      // Cannot use margin to specify letterboxes in FF or Chrome, since those ignore margins in fullscreen mode.
+      element.style.paddingLeft = element.style.paddingRight = leftRight + 'px';
+      element.style.paddingTop = element.style.paddingBottom = topBottom + 'px';
     };
-  var _emscripten_resize_heap = (requestedSize) => {
-      var oldSize = HEAPU8.length;
-      // With CAN_ADDRESS_2GB or MEMORY64, pointers are already unsigned.
-      requestedSize >>>= 0;
-      abortOnCannotGrowMemory(requestedSize);
-    };
-
+  
   
   var maybeCStringToJsString = (cString) => {
       // "cString > 2" checks if the input is a number, and isn't of the special
@@ -4614,6 +4609,266 @@ var ASM_CONSTS = {
       canvas.height = height;
       return 0;
     };
+  
+  
+  var _emscripten_get_canvas_element_size = (target, width, height) => {
+      var canvas = findCanvasEventTarget(target);
+      if (!canvas) return -4;
+      HEAP32[((width)>>2)] = canvas.width;
+      HEAP32[((height)>>2)] = canvas.height;
+    };
+  
+  
+  
+  
+  var stringToUTF8OnStack = (str) => {
+      var size = lengthBytesUTF8(str) + 1;
+      var ret = stackAlloc(size);
+      stringToUTF8(str, ret, size);
+      return ret;
+    };
+  var getCanvasElementSize = (target) => withStackSave(() => {
+      var w = stackAlloc(8);
+      var h = w + 4;
+  
+      var targetInt = stringToUTF8OnStack(target.id);
+      var ret = _emscripten_get_canvas_element_size(targetInt, w, h);
+      var size = [HEAP32[((w)>>2)], HEAP32[((h)>>2)]];
+      return size;
+    });
+  
+  
+  
+  var setCanvasElementSize = (target, width, height) => {
+      if (!target.controlTransferredOffscreen) {
+        target.width = width;
+        target.height = height;
+      } else {
+        // This function is being called from high-level JavaScript code instead of asm.js/Wasm,
+        // and it needs to synchronously proxy over to another thread, so marshal the string onto the heap to do the call.
+        withStackSave(() => {
+          var targetInt = stringToUTF8OnStack(target.id);
+          _emscripten_set_canvas_element_size(targetInt, width, height);
+        });
+      }
+    };
+  
+  
+  
+  
+  var registerRestoreOldStyle = (canvas) => {
+      var canvasSize = getCanvasElementSize(canvas);
+      var oldWidth = canvasSize[0];
+      var oldHeight = canvasSize[1];
+      var oldCssWidth = canvas.style.width;
+      var oldCssHeight = canvas.style.height;
+      var oldBackgroundColor = canvas.style.backgroundColor; // Chrome reads color from here.
+      var oldDocumentBackgroundColor = document.body.style.backgroundColor; // IE11 reads color from here.
+      // Firefox always has black background color.
+      var oldPaddingLeft = canvas.style.paddingLeft; // Chrome, FF, Safari
+      var oldPaddingRight = canvas.style.paddingRight;
+      var oldPaddingTop = canvas.style.paddingTop;
+      var oldPaddingBottom = canvas.style.paddingBottom;
+      var oldMarginLeft = canvas.style.marginLeft; // IE11
+      var oldMarginRight = canvas.style.marginRight;
+      var oldMarginTop = canvas.style.marginTop;
+      var oldMarginBottom = canvas.style.marginBottom;
+      var oldDocumentBodyMargin = document.body.style.margin;
+      var oldDocumentOverflow = document.documentElement.style.overflow; // Chrome, Firefox
+      var oldDocumentScroll = document.body.scroll; // IE
+      var oldImageRendering = canvas.style.imageRendering;
+  
+      function restoreOldStyle() {
+        var fullscreenElement = document.fullscreenElement
+          || document.webkitFullscreenElement
+          ;
+        if (!fullscreenElement) {
+          document.removeEventListener('fullscreenchange', restoreOldStyle);
+  
+          // Unprefixed Fullscreen API shipped in Chromium 71 (https://bugs.chromium.org/p/chromium/issues/detail?id=383813)
+          // As of Safari 13.0.3 on macOS Catalina 10.15.1 still ships with prefixed webkitfullscreenchange. TODO: revisit this check once Safari ships unprefixed version.
+          document.removeEventListener('webkitfullscreenchange', restoreOldStyle);
+  
+          setCanvasElementSize(canvas, oldWidth, oldHeight);
+  
+          canvas.style.width = oldCssWidth;
+          canvas.style.height = oldCssHeight;
+          canvas.style.backgroundColor = oldBackgroundColor; // Chrome
+          // IE11 hack: assigning 'undefined' or an empty string to document.body.style.backgroundColor has no effect, so first assign back the default color
+          // before setting the undefined value. Setting undefined value is also important, or otherwise we would later treat that as something that the user
+          // had explicitly set so subsequent fullscreen transitions would not set background color properly.
+          if (!oldDocumentBackgroundColor) document.body.style.backgroundColor = 'white';
+          document.body.style.backgroundColor = oldDocumentBackgroundColor; // IE11
+          canvas.style.paddingLeft = oldPaddingLeft; // Chrome, FF, Safari
+          canvas.style.paddingRight = oldPaddingRight;
+          canvas.style.paddingTop = oldPaddingTop;
+          canvas.style.paddingBottom = oldPaddingBottom;
+          canvas.style.marginLeft = oldMarginLeft; // IE11
+          canvas.style.marginRight = oldMarginRight;
+          canvas.style.marginTop = oldMarginTop;
+          canvas.style.marginBottom = oldMarginBottom;
+          document.body.style.margin = oldDocumentBodyMargin;
+          document.documentElement.style.overflow = oldDocumentOverflow; // Chrome, Firefox
+          document.body.scroll = oldDocumentScroll; // IE
+          canvas.style.imageRendering = oldImageRendering;
+          if (canvas.GLctxObject) canvas.GLctxObject.GLctx.viewport(0, 0, oldWidth, oldHeight);
+  
+          if (currentFullscreenStrategy.canvasResizedCallback) {
+            ((a1, a2, a3) => dynCall_iiii.apply(null, [currentFullscreenStrategy.canvasResizedCallback, a1, a2, a3]))(37, 0, currentFullscreenStrategy.canvasResizedCallbackUserData);
+          }
+        }
+      }
+      document.addEventListener('fullscreenchange', restoreOldStyle);
+      // Unprefixed Fullscreen API shipped in Chromium 71 (https://bugs.chromium.org/p/chromium/issues/detail?id=383813)
+      // As of Safari 13.0.3 on macOS Catalina 10.15.1 still ships with prefixed webkitfullscreenchange. TODO: revisit this check once Safari ships unprefixed version.
+      document.addEventListener('webkitfullscreenchange', restoreOldStyle);
+      return restoreOldStyle;
+    };
+  
+  
+  
+  
+  var getBoundingClientRect = (e) => specialHTMLTargets.indexOf(e) < 0 ? e.getBoundingClientRect() : {'left':0,'top':0};
+  var JSEvents_resizeCanvasForFullscreen = (target, strategy) => {
+      var restoreOldStyle = registerRestoreOldStyle(target);
+      var cssWidth = strategy.softFullscreen ? innerWidth : screen.width;
+      var cssHeight = strategy.softFullscreen ? innerHeight : screen.height;
+      var rect = getBoundingClientRect(target);
+      var windowedCssWidth = rect.width;
+      var windowedCssHeight = rect.height;
+      var canvasSize = getCanvasElementSize(target);
+      var windowedRttWidth = canvasSize[0];
+      var windowedRttHeight = canvasSize[1];
+  
+      if (strategy.scaleMode == 3) {
+        setLetterbox(target, (cssHeight - windowedCssHeight) / 2, (cssWidth - windowedCssWidth) / 2);
+        cssWidth = windowedCssWidth;
+        cssHeight = windowedCssHeight;
+      } else if (strategy.scaleMode == 2) {
+        if (cssWidth*windowedRttHeight < windowedRttWidth*cssHeight) {
+          var desiredCssHeight = windowedRttHeight * cssWidth / windowedRttWidth;
+          setLetterbox(target, (cssHeight - desiredCssHeight) / 2, 0);
+          cssHeight = desiredCssHeight;
+        } else {
+          var desiredCssWidth = windowedRttWidth * cssHeight / windowedRttHeight;
+          setLetterbox(target, 0, (cssWidth - desiredCssWidth) / 2);
+          cssWidth = desiredCssWidth;
+        }
+      }
+  
+      // If we are adding padding, must choose a background color or otherwise Chrome will give the
+      // padding a default white color. Do it only if user has not customized their own background color.
+      if (!target.style.backgroundColor) target.style.backgroundColor = 'black';
+      // IE11 does the same, but requires the color to be set in the document body.
+      if (!document.body.style.backgroundColor) document.body.style.backgroundColor = 'black'; // IE11
+      // Firefox always shows black letterboxes independent of style color.
+  
+      target.style.width = cssWidth + 'px';
+      target.style.height = cssHeight + 'px';
+  
+      if (strategy.filteringMode == 1) {
+        target.style.imageRendering = 'optimizeSpeed';
+        target.style.imageRendering = '-moz-crisp-edges';
+        target.style.imageRendering = '-o-crisp-edges';
+        target.style.imageRendering = '-webkit-optimize-contrast';
+        target.style.imageRendering = 'optimize-contrast';
+        target.style.imageRendering = 'crisp-edges';
+        target.style.imageRendering = 'pixelated';
+      }
+  
+      var dpiScale = (strategy.canvasResolutionScaleMode == 2) ? devicePixelRatio : 1;
+      if (strategy.canvasResolutionScaleMode != 0) {
+        var newWidth = (cssWidth * dpiScale)|0;
+        var newHeight = (cssHeight * dpiScale)|0;
+        setCanvasElementSize(target, newWidth, newHeight);
+        if (target.GLctxObject) target.GLctxObject.GLctx.viewport(0, 0, newWidth, newHeight);
+      }
+      return restoreOldStyle;
+    };
+  var JSEvents_requestFullscreen = (target, strategy) => {
+      // EMSCRIPTEN_FULLSCREEN_SCALE_DEFAULT + EMSCRIPTEN_FULLSCREEN_CANVAS_SCALE_NONE is a mode where no extra logic is performed to the DOM elements.
+      if (strategy.scaleMode != 0 || strategy.canvasResolutionScaleMode != 0) {
+        JSEvents_resizeCanvasForFullscreen(target, strategy);
+      }
+  
+      if (target.requestFullscreen) {
+        target.requestFullscreen();
+      } else if (target.webkitRequestFullscreen) {
+        target.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+      } else {
+        return JSEvents.fullscreenEnabled() ? -3 : -1;
+      }
+  
+      currentFullscreenStrategy = strategy;
+  
+      if (strategy.canvasResizedCallback) {
+        ((a1, a2, a3) => dynCall_iiii.apply(null, [strategy.canvasResizedCallback, a1, a2, a3]))(37, 0, strategy.canvasResizedCallbackUserData);
+      }
+  
+      return 0;
+    };
+  
+  var doRequestFullscreen = (target, strategy) => {
+      if (!JSEvents.fullscreenEnabled()) return -1;
+      target = findEventTarget(target);
+      if (!target) return -4;
+  
+      if (!target.requestFullscreen
+        && !target.webkitRequestFullscreen
+        ) {
+        return -3;
+      }
+  
+      var canPerformRequests = JSEvents.canPerformEventHandlerRequests();
+  
+      // Queue this function call if we're not currently in an event handler and the user saw it appropriate to do so.
+      if (!canPerformRequests) {
+        if (strategy.deferUntilInEventHandler) {
+          JSEvents.deferCall(JSEvents_requestFullscreen, 1 /* priority over pointer lock */, [target, strategy]);
+          return 1;
+        }
+        return -2;
+      }
+  
+      return JSEvents_requestFullscreen(target, strategy);
+    };
+  var _emscripten_request_fullscreen = (target, deferUntilInEventHandler) => {
+      var strategy = {
+        // These options perform no added logic, but just bare request fullscreen.
+        scaleMode: 0,
+        canvasResolutionScaleMode: 0,
+        filteringMode: 0,
+        deferUntilInEventHandler,
+        canvasResizedCallbackTargetThread: 2
+      };
+      return doRequestFullscreen(target, strategy);
+    };
+
+  var getHeapMax = () =>
+      HEAPU8.length;
+  
+  var abortOnCannotGrowMemory = (requestedSize) => {
+      abort(`Cannot enlarge memory arrays to size ${requestedSize} bytes (OOM). Either (1) compile with -sINITIAL_MEMORY=X with X higher than the current value ${HEAP8.length}, (2) compile with -sALLOW_MEMORY_GROWTH which allows increasing the size at runtime, or (3) if you want malloc to return NULL (0) instead of this abort, compile with -sABORTING_MALLOC=0`);
+    };
+  var _emscripten_resize_heap = (requestedSize) => {
+      var oldSize = HEAPU8.length;
+      // With CAN_ADDRESS_2GB or MEMORY64, pointers are already unsigned.
+      requestedSize >>>= 0;
+      abortOnCannotGrowMemory(requestedSize);
+    };
+
+  /** @suppress {checkTypes} */
+  var _emscripten_sample_gamepad_data = () => {
+      try {
+        if (navigator.getGamepads) return (JSEvents.lastGamepadState = navigator.getGamepads())
+          ? 0 : -1;
+      } catch(e) {
+        err(`navigator.getGamepads() exists, but failed to execute with exception ${e}. Disabling Gamepad access.`);
+        navigator.getGamepads = null; // Disable getGamepads() so that it won't be attempted to be used again.
+      }
+      return -1;
+    };
+
 
   
   
@@ -4732,17 +4987,6 @@ var ASM_CONSTS = {
       return JSEvents.registerOrRemoveHandler(eventHandler);
     };
   
-  /** @suppress {checkTypes} */
-  var _emscripten_sample_gamepad_data = () => {
-      try {
-        if (navigator.getGamepads) return (JSEvents.lastGamepadState = navigator.getGamepads())
-          ? 0 : -1;
-      } catch(e) {
-        err(`navigator.getGamepads() exists, but failed to execute with exception ${e}. Disabling Gamepad access.`);
-        navigator.getGamepads = null; // Disable getGamepads() so that it won't be attempted to be used again.
-      }
-      return -1;
-    };
   var _emscripten_set_gamepadconnected_callback_on_thread = (userData, useCapture, callbackfunc, targetThread) => {
       if (_emscripten_sample_gamepad_data()) return -1;
       return registerGamepadEventCallback(2, userData, useCapture, callbackfunc, 26, "gamepadconnected", targetThread);
@@ -4802,7 +5046,6 @@ var ASM_CONSTS = {
 
   
   
-  var getBoundingClientRect = (e) => specialHTMLTargets.indexOf(e) < 0 ? e.getBoundingClientRect() : {'left':0,'top':0};
   
   var fillMouseEventData = (eventStruct, e, target) => {
       assert(eventStruct % 4 == 0);
@@ -11960,7 +12203,11 @@ var wasmImports = {
   /** @export */
   emscripten_memcpy_js: _emscripten_memcpy_js,
   /** @export */
+  emscripten_request_fullscreen: _emscripten_request_fullscreen,
+  /** @export */
   emscripten_resize_heap: _emscripten_resize_heap,
+  /** @export */
+  emscripten_sample_gamepad_data: _emscripten_sample_gamepad_data,
   /** @export */
   emscripten_set_canvas_element_size: _emscripten_set_canvas_element_size,
   /** @export */
@@ -12149,7 +12396,6 @@ var missingLibrarySymbols = [
   'UTF32ToString',
   'stringToUTF32',
   'lengthBytesUTF32',
-  'stringToUTF8OnStack',
   'writeArrayToMemory',
   'fillDeviceOrientationEventData',
   'registerDeviceOrientationEventCallback',
@@ -12158,14 +12404,9 @@ var missingLibrarySymbols = [
   'screenOrientation',
   'fillOrientationChangeEventData',
   'registerOrientationChangeEventCallback',
-  'JSEvents_requestFullscreen',
-  'JSEvents_resizeCanvasForFullscreen',
-  'registerRestoreOldStyle',
   'hideEverythingExceptGivenElement',
   'restoreHiddenElements',
-  'setLetterbox',
   'softFullscreenResizeWebGLRenderTarget',
-  'doRequestFullscreen',
   'fillPointerlockChangeEventData',
   'registerPointerlockChangeEventCallback',
   'registerPointerlockErrorEventCallback',
@@ -12176,8 +12417,6 @@ var missingLibrarySymbols = [
   'fillBatteryEventData',
   'battery',
   'registerBatteryEventCallback',
-  'setCanvasElementSize',
-  'getCanvasElementSize',
   'jsStackTrace',
   'stackTrace',
   'getEnvStrings',
@@ -12300,6 +12539,7 @@ var unexportedSymbols = [
   'lengthBytesUTF8',
   'intArrayFromString',
   'UTF16Decoder',
+  'stringToUTF8OnStack',
   'JSEvents',
   'registerKeyEventCallback',
   'specialHTMLTargets',
@@ -12314,11 +12554,18 @@ var unexportedSymbols = [
   'registerFocusEventCallback',
   'fillFullscreenChangeEventData',
   'registerFullscreenChangeEventCallback',
+  'JSEvents_requestFullscreen',
+  'JSEvents_resizeCanvasForFullscreen',
+  'registerRestoreOldStyle',
+  'setLetterbox',
   'currentFullscreenStrategy',
   'restoreOldWindowedStyle',
+  'doRequestFullscreen',
   'registerTouchEventCallback',
   'fillGamepadEventData',
   'registerGamepadEventCallback',
+  'setCanvasElementSize',
+  'getCanvasElementSize',
   'demangle',
   'demangleAll',
   'ExitStatus',
