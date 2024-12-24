@@ -62,7 +62,7 @@ RGFW_window* win;
 
 void RFont_render_text(u32 atlas, float* verts, float* tcoords, size_t nverts) {
 	u32 atlasWidth = *((u32*)RFont_info.atlases[atlas] - 1);
-	for (size_t i = 0; i < nverts; i += 6) {
+	for (size_t i = 0; i < nverts; i += 9) {
 		RSoft_vector npoints[3] = {RSOFT_VECTOR2D(verts[i], verts[i + 1]), 
 								   RSOFT_VECTOR2D(verts[i + 2], verts[i + 3]), 
 								   RSOFT_VECTOR2D(verts[i + 4], verts[i + 5])};
@@ -70,6 +70,7 @@ void RFont_render_text(u32 atlas, float* verts, float* tcoords, size_t nverts) {
 		RSoft_setTexture(RFont_info.atlases[atlas], RSOFT_RECT(tcoords[0], tcoords[1], 
 														atlasWidth, RFONT_ATLAS_HEIGHT), 
 														RSOFT_AREA(atlasWidth, RFONT_ATLAS_HEIGHT));
+		
 		RSoft_drawRectF(win->buffer, RSOFT_RECTF(npoints[0].x, npoints[1].y, 
 						(npoints[2].x - npoints[0].x), abs(npoints[0].y - npoints[1].y)), (u8*)&RFont_info.color);	
 	}
@@ -87,10 +88,10 @@ void RFont_render_legacy(u8 legacy) { }
 
 
 int main(void) {
-    win = RGFW_createWindow("Basic buffer example", RGFW_RECT(0, 0, 800, 500), RGFW_CENTER | RGFW_TRANSPARENT_WINDOW);
+    win = RGFW_createWindow("Basic buffer example", RGFW_RECT(0, 0, 800, 500), RGFW_CENTER);
    
     RFont_init(win->r.w, win->r.h);
-    RFont_font* font = RFont_font_init("DejaVuSans.ttf");
+    RFont_font* font = RFont_font_init("COMICSANS.ttf");
 
 	RSoft_setBufferSize(RGFW_getScreenSize());
     RSoft_setCanvasSize(RGFW_AREA(win->r.w, win->r.h));
@@ -112,7 +113,7 @@ int main(void) {
 		RSoft_clear(win->buffer, (u8[4]){0, 0, 255, 255});
         RFont_set_color(0.0f, 1.0f, 0, 1.0f);
 
-        RFont_draw_text(font, "abcdefghijklmnopqrstuvwxyz", 20, 0, 120);
+        RFont_draw_text(font, "GORDON OF LOVE", 20, 0, 120);
 	
 		RGFW_window_swapBuffers(win);
     }
