@@ -7,6 +7,8 @@
 #define RSoft_area RGFW_area
 #define RSoft_point RGFW_point
 
+#include <math.h>
+
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
@@ -22,7 +24,8 @@ RSoft_matrix rotateAroundCenter(RSoft_vector center, float angle) {
 }
 
 int main(void) {
-    RGFW_window* win = RGFW_createWindow("Raycaster example", RGFW_RECT(0, 0, 1100, 500), RGFW_CENTER);
+    RGFW_window* win = RGFW_createWindow("Raycaster example", RGFW_RECT(0, 0, 1100, 500), RGFW_windowCenter);
+    RGFW_window_initBuffer(win);
     
     RSoft_setBufferSize(RGFW_getScreenSize());
     RSoft_setCanvasSize(RGFW_AREA(win->r.w, win->r.h));
@@ -67,7 +70,7 @@ int main(void) {
 	i8 running = 1;    
 	while (running) {
         while (RGFW_window_checkEvent(win)) {
-            if (win->event.type == RGFW_quit || RGFW_isPressed(win, RGFW_Escape)) {
+            if (win->event.type == RGFW_quit || RGFW_isPressed(win, RGFW_escape)) {
                 running = 0;
                 break;
 			}
@@ -115,13 +118,13 @@ int main(void) {
 				player = next;
 		}
 
-		if (RGFW_isPressed(win, RGFW_Left)) {
+		if (RGFW_isPressed(win, RGFW_left)) {
 			angle -= 5;
 ;
 			if (angle < 0)
 				angle += 360;
 		}
-		if (RGFW_isPressed(win, RGFW_Right)) {
+		if (RGFW_isPressed(win, RGFW_right)) {
 			angle += 5;
 			if (angle >= 360)
 				angle -= 360;
@@ -143,7 +146,7 @@ int main(void) {
 			}
 
 
-			if (RGFW_isPressed(win, RGFW_Tab)) {
+			if (RGFW_isPressed(win, RGFW_tab)) {
 				RSoft_drawLineF(win->buffer, RSOFT_VECTOR2D(player.x * 50, player.y * 50), RSOFT_VECTOR2D(ray.x * 50, ray.y * 50),  (u8[4]){200, 100, 20, 255});
 				continue;
 			}
@@ -170,7 +173,7 @@ int main(void) {
 		}
 			
 
-		if (RGFW_isPressed(win, RGFW_Tab)) {
+		if (RGFW_isPressed(win, RGFW_tab)) {
 			for (size_t y = 0; y < map_height; y++) {
 				for (size_t x = 0; x < map_width; x++) {
 					if (map[(y * map_width) + x]) {

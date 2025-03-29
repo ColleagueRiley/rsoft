@@ -7,6 +7,8 @@
 #define RSoft_area RGFW_area
 #define RSoft_point RGFW_point
 
+#include <math.h>
+
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
@@ -28,7 +30,7 @@ void drawLine(RGFW_window* win, RSoft_vector center, RSoft_vector player, float 
 
 	RSoft_setMatrix(RSoft_initMatrix());
 
-	if (RGFW_isPressed(win, RGFW_Tab)) {
+	if (RGFW_isPressed(win, RGFW_tab)) {
 		RSoft_drawLineF(win->buffer, v1, v2, (u8[4]){255, 225, 225, 255});
 	} else {
 		v1.x = (-(v1.x * 200)) / (v1.y - (center.y));
@@ -53,7 +55,8 @@ void drawWall(RGFW_window* win, RSoft_vector center, RSoft_vector player, float 
 }
 
 int main(void) {
-    RGFW_window* win = RGFW_createWindow("Doom-Like example", RGFW_RECT(0, 0, 800, 500), RGFW_CENTER | RGFW_TRANSPARENT_WINDOW);
+    RGFW_window* win = RGFW_createWindow("Doom-Like example", RGFW_RECT(0, 0, 800, 500), RGFW_windowCenter | RGFW_windowTransparent);
+    RGFW_window_initBuffer(win);
     
     RSoft_setBufferSize(RGFW_getScreenSize());
     RSoft_setCanvasSize(RGFW_AREA(win->r.w, win->r.h));
@@ -70,7 +73,7 @@ int main(void) {
 	i8 running = 1;    
 	while (running) {
         while (RGFW_window_checkEvent(win)) {
-            if (win->event.type == RGFW_quit || RGFW_isPressed(win, RGFW_Escape)) {
+            if (win->event.type == RGFW_quit || RGFW_isPressed(win, RGFW_escape)) {
                 running = 0;
                 break;
 			}
@@ -109,20 +112,20 @@ int main(void) {
 			player = next;
 		}
 
-		if (RGFW_isPressed(win, RGFW_Left))
+		if (RGFW_isPressed(win, RGFW_left))
 			angle += 0.5;	
-		if (RGFW_isPressed(win, RGFW_Right))
+		if (RGFW_isPressed(win, RGFW_right))
 			angle -= 0.5;
 
-		if (RGFW_isPressed(win, RGFW_Up))
+		if (RGFW_isPressed(win, RGFW_up))
 			player.z -= 5;	
-		if (RGFW_isPressed(win, RGFW_Down))
+		if (RGFW_isPressed(win, RGFW_down))
 			player.z += 5;
 
 		RSoft_clear(win->buffer, (u8[4]){0, 0, 255, 255});
 		RSoft_setMatrix(RSoft_initMatrix());
 		
-		if (RGFW_isPressed(win, RGFW_Tab)) {
+		if (RGFW_isPressed(win, RGFW_tab)) {
 			RSoft_matrix m = RSoft_initMatrix();
 			m = RSoft_translateMatrix(m, RSOFT_VECTOR2D(-center.x, -center.y));
 			m = RSoft_simpleRotateMatrix(m, angle - 90);
