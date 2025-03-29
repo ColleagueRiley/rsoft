@@ -131,33 +131,31 @@ Module['FS_createPath']("/.git/logs/refs", "heads", true, true);
 Module['FS_createPath']("/.git/logs/refs", "remotes", true, true);
 Module['FS_createPath']("/.git/logs/refs/remotes", "origin", true, true);
 Module['FS_createPath']("/.git", "objects", true, true);
-Module['FS_createPath']("/.git/objects", "0e", true, true);
 Module['FS_createPath']("/.git/objects", "0f", true, true);
 Module['FS_createPath']("/.git/objects", "14", true, true);
-Module['FS_createPath']("/.git/objects", "25", true, true);
-Module['FS_createPath']("/.git/objects", "2d", true, true);
+Module['FS_createPath']("/.git/objects", "1b", true, true);
 Module['FS_createPath']("/.git/objects", "41", true, true);
-Module['FS_createPath']("/.git/objects", "4d", true, true);
 Module['FS_createPath']("/.git/objects", "53", true, true);
-Module['FS_createPath']("/.git/objects", "55", true, true);
 Module['FS_createPath']("/.git/objects", "5a", true, true);
 Module['FS_createPath']("/.git/objects", "5e", true, true);
+Module['FS_createPath']("/.git/objects", "63", true, true);
 Module['FS_createPath']("/.git/objects", "65", true, true);
-Module['FS_createPath']("/.git/objects", "6e", true, true);
 Module['FS_createPath']("/.git/objects", "7d", true, true);
 Module['FS_createPath']("/.git/objects", "83", true, true);
 Module['FS_createPath']("/.git/objects", "8b", true, true);
+Module['FS_createPath']("/.git/objects", "98", true, true);
+Module['FS_createPath']("/.git/objects", "9d", true, true);
 Module['FS_createPath']("/.git/objects", "a6", true, true);
 Module['FS_createPath']("/.git/objects", "af", true, true);
 Module['FS_createPath']("/.git/objects", "bd", true, true);
-Module['FS_createPath']("/.git/objects", "c3", true, true);
 Module['FS_createPath']("/.git/objects", "ce", true, true);
 Module['FS_createPath']("/.git/objects", "cf", true, true);
+Module['FS_createPath']("/.git/objects", "d1", true, true);
 Module['FS_createPath']("/.git/objects", "d5", true, true);
-Module['FS_createPath']("/.git/objects", "e0", true, true);
 Module['FS_createPath']("/.git/objects", "e6", true, true);
 Module['FS_createPath']("/.git/objects", "eb", true, true);
 Module['FS_createPath']("/.git/objects", "f1", true, true);
+Module['FS_createPath']("/.git/objects", "f5", true, true);
 Module['FS_createPath']("/.git/objects", "f7", true, true);
 Module['FS_createPath']("/.git/objects", "fa", true, true);
 Module['FS_createPath']("/.git", "refs", true, true);
@@ -234,7 +232,7 @@ Module['FS_createPath']("/", "examples", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/.git/FETCH_HEAD", "start": 0, "end": 128}, {"filename": "/.git/HEAD", "start": 128, "end": 149}, {"filename": "/.git/config", "start": 149, "end": 566}, {"filename": "/.git/description", "start": 566, "end": 639}, {"filename": "/.git/hooks/applypatch-msg.sample", "start": 639, "end": 1117}, {"filename": "/.git/hooks/commit-msg.sample", "start": 1117, "end": 2013}, {"filename": "/.git/hooks/fsmonitor-watchman.sample", "start": 2013, "end": 6739}, {"filename": "/.git/hooks/post-update.sample", "start": 6739, "end": 6928}, {"filename": "/.git/hooks/pre-applypatch.sample", "start": 6928, "end": 7352}, {"filename": "/.git/hooks/pre-commit.sample", "start": 7352, "end": 9001}, {"filename": "/.git/hooks/pre-merge-commit.sample", "start": 9001, "end": 9417}, {"filename": "/.git/hooks/pre-push.sample", "start": 9417, "end": 10791}, {"filename": "/.git/hooks/pre-rebase.sample", "start": 10791, "end": 15689}, {"filename": "/.git/hooks/pre-receive.sample", "start": 15689, "end": 16233}, {"filename": "/.git/hooks/prepare-commit-msg.sample", "start": 16233, "end": 17725}, {"filename": "/.git/hooks/push-to-checkout.sample", "start": 17725, "end": 20508}, {"filename": "/.git/hooks/sendemail-validate.sample", "start": 20508, "end": 22816}, {"filename": "/.git/hooks/update.sample", "start": 22816, "end": 26466}, {"filename": "/.git/index", "start": 26466, "end": 28896}, {"filename": "/.git/info/exclude", "start": 28896, "end": 29136}, {"filename": "/.git/logs/HEAD", "start": 29136, "end": 29355}, {"filename": "/.git/logs/refs/heads/main", "start": 29355, "end": 29583}, {"filename": "/.git/logs/refs/remotes/origin/main", "start": 29583, "end": 29921}, {"filename": "/.git/objects/0e/ebc8e1b6902619c6665ba25c03af2a58a0f674", "start": 29921, "end": 31787}, {"filename": "/.git/objects/0f/c185a865fca3db2820ee628bd9ecb6265b188c", "start": 31787, "end": 66636}, {"filename": "/.git/objects/14/60cee34b658ea04936fff7449c024775fc4ad4", "start": 66636, "end": 67552}, {"filename": "/.git/objects/25/203eb7390f8a8a06edc7efec1757706ba8685f", "start": 67552, "end": 67983}, {"filename": "/.git/objects/2d/6831b66ef0b3724f8205eb3d9fab0706c66ff5", "start": 67983, "end": 68481}, {"filename": "/.git/objects/41/53a179623633360c8126a24d09a769bbcded3c", "start": 68481, "end": 68975}, {"filename": "/.git/objects/4d/de4e96ec37111a1ea30e520074e5c08eed87e3", "start": 68975, "end": 70348}, {"filename": "/.git/objects/53/d6bbaf9307c2ed1f5922382e55fd267d6eeae8", "start": 70348, "end": 70683}, {"filename": "/.git/objects/55/cf6cfb0c0bac14bd7bea1584d514efd5490120", "start": 70683, "end": 72101}, {"filename": "/.git/objects/5a/66932a94dbea89753f39cdebf536200411edf4", "start": 72101, "end": 155655}, {"filename": "/.git/objects/5e/d13980bb60ac705d14b2ad101358a6f9996553", "start": 155655, "end": 180229}, {"filename": "/.git/objects/65/4efa532bd1a2d2bdeb26aef8591f664973da06", "start": 180229, "end": 181026}, {"filename": "/.git/objects/6e/025a56b16b2e63bd2669d6fd9719bd64bfa9f6", "start": 181026, "end": 181191}, {"filename": "/.git/objects/7d/067c6c36e8309c7b1bdcb7856992734adaa44f", "start": 181191, "end": 181354}, {"filename": "/.git/objects/83/1e3d867aebc4f88d3168b1ac7df2b7ba8a6ee5", "start": 181354, "end": 277306}, {"filename": "/.git/objects/8b/8721151861f97daa08a19117b5ecf936c4bc26", "start": 277306, "end": 278222}, {"filename": "/.git/objects/a6/df3be03d203b5512a3fbf45f5ef744cac58081", "start": 278222, "end": 577334}, {"filename": "/.git/objects/af/8f7125706d1be4f779f1e25891fdfd7cf04b45", "start": 577334, "end": 577386}, {"filename": "/.git/objects/bd/23dad6e7eeb0460b99639219dfb6229e924e50", "start": 577386, "end": 578301}, {"filename": "/.git/objects/c3/1a167d4e0c0689b9951544a13381b6a5e39d3f", "start": 578301, "end": 666019}, {"filename": "/.git/objects/ce/653a319e4bfe267f249593914525aede494c0c", "start": 666019, "end": 666936}, {"filename": "/.git/objects/cf/f94232397445507436b5031793ea18c95105f7", "start": 666936, "end": 673249}, {"filename": "/.git/objects/d5/782190e1855f0b30cf1f8bd6cd18ec5fbea3ba", "start": 673249, "end": 674216}, {"filename": "/.git/objects/e0/a69c14e3f3297bb57fb6e4e2fbf8efe8eb8ff5", "start": 674216, "end": 675141}, {"filename": "/.git/objects/e6/9b02fda1a77ea7dd314a008a941d20bea7d8db", "start": 675141, "end": 675622}, {"filename": "/.git/objects/eb/3089deb84fb3f6808821c19a1661c3505d0dbe", "start": 675622, "end": 714859}, {"filename": "/.git/objects/f1/24e13e577f742ea9a24aad4ed9f301db2de7f5", "start": 714859, "end": 753557}, {"filename": "/.git/objects/f7/129e90ae35c48ae2c3244c5cad023192924106", "start": 753557, "end": 754705}, {"filename": "/.git/objects/fa/d4b4b5b9d3916d9812eae757f00eeea83ad51b", "start": 754705, "end": 754757}, {"filename": "/.git/refs/heads/main", "start": 754757, "end": 754798}, {"filename": "/.git/refs/remotes/origin/main", "start": 754798, "end": 754839}, {"filename": "/.git/shallow", "start": 754839, "end": 754880}, {"filename": "/.github/workflows/web.yml", "start": 754880, "end": 755443}, {"filename": "/COMICSANS.ttf", "start": 755443, "end": 890927}, {"filename": "/LICENSE", "start": 890927, "end": 891803}, {"filename": "/Makefile", "start": 891803, "end": 894135}, {"filename": "/README.md", "start": 894135, "end": 895532}, {"filename": "/RSoft.h", "start": 895532, "end": 917899}, {"filename": "/RSoft_logo.png", "start": 917899, "end": 960094}, {"filename": "/TODO", "start": 960094, "end": 960300}, {"filename": "/examples/COMICSANS.ttf", "start": 960300, "end": 1095784}, {"filename": "/examples/RFont.h", "start": 1095784, "end": 1216547}, {"filename": "/examples/RGFW.h", "start": 1216547, "end": 1515646}, {"filename": "/examples/doom-like.c", "start": 1515646, "end": 1520048}, {"filename": "/examples/doom-like.html", "start": 1520048, "end": 1521888}, {"filename": "/examples/raycaster.c", "start": 1521888, "end": 1528428}, {"filename": "/examples/raycaster.html", "start": 1528428, "end": 1530268}, {"filename": "/examples/shapes.c", "start": 1530268, "end": 1532413}, {"filename": "/examples/shapes.data", "start": 1532413, "end": 4089318}, {"filename": "/examples/shapes.html", "start": 4089318, "end": 4091152}, {"filename": "/examples/shapes.js", "start": 4091152, "end": 4581648}, {"filename": "/examples/shapes.wasm", "start": 4581648, "end": 4686025}, {"filename": "/examples/stb_image.h", "start": 4686025, "end": 4965377}, {"filename": "/examples/tex.jpg", "start": 4965377, "end": 4989985}, {"filename": "/examples/text.c", "start": 4989985, "end": 4993422}, {"filename": "/examples/textures.c", "start": 4993422, "end": 4995965}, {"filename": "/examples/textures.data", "start": 4995965, "end": 10704648}, {"filename": "/examples/textures.html", "start": 10704648, "end": 10706486}, {"filename": "/examples/textures.js", "start": 10706486, "end": 11197686}, {"filename": "/examples/textures.wasm", "start": 11197686, "end": 11736831}, {"filename": "/examples/wall.jpg", "start": 11736831, "end": 11778058}, {"filename": "/examples/wall2.jpg", "start": 11778058, "end": 12078618}, {"filename": "/index.html", "start": 12078618, "end": 12081316}, {"filename": "/tex.jpg", "start": 12081316, "end": 12105924}, {"filename": "/wall.jpg", "start": 12105924, "end": 12147151}, {"filename": "/wall2.jpg", "start": 12147151, "end": 12447711}], "remote_package_size": 12447711});
+    loadPackage({"files": [{"filename": "/.git/FETCH_HEAD", "start": 0, "end": 128}, {"filename": "/.git/HEAD", "start": 128, "end": 149}, {"filename": "/.git/config", "start": 149, "end": 566}, {"filename": "/.git/description", "start": 566, "end": 639}, {"filename": "/.git/hooks/applypatch-msg.sample", "start": 639, "end": 1117}, {"filename": "/.git/hooks/commit-msg.sample", "start": 1117, "end": 2013}, {"filename": "/.git/hooks/fsmonitor-watchman.sample", "start": 2013, "end": 6739}, {"filename": "/.git/hooks/post-update.sample", "start": 6739, "end": 6928}, {"filename": "/.git/hooks/pre-applypatch.sample", "start": 6928, "end": 7352}, {"filename": "/.git/hooks/pre-commit.sample", "start": 7352, "end": 9001}, {"filename": "/.git/hooks/pre-merge-commit.sample", "start": 9001, "end": 9417}, {"filename": "/.git/hooks/pre-push.sample", "start": 9417, "end": 10791}, {"filename": "/.git/hooks/pre-rebase.sample", "start": 10791, "end": 15689}, {"filename": "/.git/hooks/pre-receive.sample", "start": 15689, "end": 16233}, {"filename": "/.git/hooks/prepare-commit-msg.sample", "start": 16233, "end": 17725}, {"filename": "/.git/hooks/push-to-checkout.sample", "start": 17725, "end": 20508}, {"filename": "/.git/hooks/sendemail-validate.sample", "start": 20508, "end": 22816}, {"filename": "/.git/hooks/update.sample", "start": 22816, "end": 26466}, {"filename": "/.git/index", "start": 26466, "end": 28896}, {"filename": "/.git/info/exclude", "start": 28896, "end": 29136}, {"filename": "/.git/logs/HEAD", "start": 29136, "end": 29354}, {"filename": "/.git/logs/refs/heads/main", "start": 29354, "end": 29581}, {"filename": "/.git/logs/refs/remotes/origin/HEAD", "start": 29581, "end": 29768}, {"filename": "/.git/logs/refs/remotes/origin/main", "start": 29768, "end": 30105}, {"filename": "/.git/objects/0f/c185a865fca3db2820ee628bd9ecb6265b188c", "start": 30105, "end": 64954}, {"filename": "/.git/objects/14/60cee34b658ea04936fff7449c024775fc4ad4", "start": 64954, "end": 65870}, {"filename": "/.git/objects/1b/b7b8623b3c006e3fac7f2e1ee7dafcb3ef7b27", "start": 65870, "end": 67751}, {"filename": "/.git/objects/41/53a179623633360c8126a24d09a769bbcded3c", "start": 67751, "end": 68245}, {"filename": "/.git/objects/53/d6bbaf9307c2ed1f5922382e55fd267d6eeae8", "start": 68245, "end": 68580}, {"filename": "/.git/objects/5a/66932a94dbea89753f39cdebf536200411edf4", "start": 68580, "end": 152134}, {"filename": "/.git/objects/5e/d13980bb60ac705d14b2ad101358a6f9996553", "start": 152134, "end": 176708}, {"filename": "/.git/objects/63/ccc4a15801181cc58c1718a6a532b6ceaf7ff2", "start": 176708, "end": 178134}, {"filename": "/.git/objects/65/edf01bd5da4aad215ece99cf45a7dc58c61e18", "start": 178134, "end": 179075}, {"filename": "/.git/objects/7d/067c6c36e8309c7b1bdcb7856992734adaa44f", "start": 179075, "end": 179238}, {"filename": "/.git/objects/83/1e3d867aebc4f88d3168b1ac7df2b7ba8a6ee5", "start": 179238, "end": 275190}, {"filename": "/.git/objects/8b/8721151861f97daa08a19117b5ecf936c4bc26", "start": 275190, "end": 276106}, {"filename": "/.git/objects/98/acbf927fd3a0988f4878eec8ec8afec08ceb3a", "start": 276106, "end": 276603}, {"filename": "/.git/objects/98/cd72bc5ef0d71aa522220a5e22393b9c99d061", "start": 276603, "end": 277400}, {"filename": "/.git/objects/9d/bf8648ca6a3c4a1dc92d308bd16d136aa8525e", "start": 277400, "end": 278783}, {"filename": "/.git/objects/a6/df3be03d203b5512a3fbf45f5ef744cac58081", "start": 278783, "end": 577895}, {"filename": "/.git/objects/af/728a8564d21a2d3a432f7aa6cb277e4134c112", "start": 577895, "end": 578328}, {"filename": "/.git/objects/af/8f7125706d1be4f779f1e25891fdfd7cf04b45", "start": 578328, "end": 578380}, {"filename": "/.git/objects/bd/23dad6e7eeb0460b99639219dfb6229e924e50", "start": 578380, "end": 579295}, {"filename": "/.git/objects/ce/653a319e4bfe267f249593914525aede494c0c", "start": 579295, "end": 580212}, {"filename": "/.git/objects/cf/f94232397445507436b5031793ea18c95105f7", "start": 580212, "end": 586525}, {"filename": "/.git/objects/d1/ce175a459359278b581585ed2c07849323f192", "start": 586525, "end": 694660}, {"filename": "/.git/objects/d5/782190e1855f0b30cf1f8bd6cd18ec5fbea3ba", "start": 694660, "end": 695627}, {"filename": "/.git/objects/e6/9b02fda1a77ea7dd314a008a941d20bea7d8db", "start": 695627, "end": 696108}, {"filename": "/.git/objects/eb/3089deb84fb3f6808821c19a1661c3505d0dbe", "start": 696108, "end": 735345}, {"filename": "/.git/objects/f1/24e13e577f742ea9a24aad4ed9f301db2de7f5", "start": 735345, "end": 774043}, {"filename": "/.git/objects/f5/48c93eeecd1c318f521df53a791e62e696841b", "start": 774043, "end": 774206}, {"filename": "/.git/objects/f7/129e90ae35c48ae2c3244c5cad023192924106", "start": 774206, "end": 775354}, {"filename": "/.git/objects/fa/d4b4b5b9d3916d9812eae757f00eeea83ad51b", "start": 775354, "end": 775406}, {"filename": "/.git/refs/heads/main", "start": 775406, "end": 775447}, {"filename": "/.git/refs/remotes/origin/HEAD", "start": 775447, "end": 775477}, {"filename": "/.git/refs/remotes/origin/main", "start": 775477, "end": 775518}, {"filename": "/.git/shallow", "start": 775518, "end": 775559}, {"filename": "/.github/workflows/web.yml", "start": 775559, "end": 776122}, {"filename": "/COMICSANS.ttf", "start": 776122, "end": 911606}, {"filename": "/LICENSE", "start": 911606, "end": 912482}, {"filename": "/Makefile", "start": 912482, "end": 914814}, {"filename": "/README.md", "start": 914814, "end": 916211}, {"filename": "/RSoft.h", "start": 916211, "end": 938578}, {"filename": "/RSoft_logo.png", "start": 938578, "end": 980773}, {"filename": "/TODO", "start": 980773, "end": 980979}, {"filename": "/examples/COMICSANS.ttf", "start": 980979, "end": 1116463}, {"filename": "/examples/RFont.h", "start": 1116463, "end": 1237226}, {"filename": "/examples/RGFW.h", "start": 1237226, "end": 1609631}, {"filename": "/examples/doom-like.c", "start": 1609631, "end": 1614093}, {"filename": "/examples/doom-like.html", "start": 1614093, "end": 1615933}, {"filename": "/examples/raycaster.c", "start": 1615933, "end": 1622534}, {"filename": "/examples/raycaster.html", "start": 1622534, "end": 1624374}, {"filename": "/examples/shapes.c", "start": 1624374, "end": 1626524}, {"filename": "/examples/shapes.data", "start": 1626524, "end": 4277640}, {"filename": "/examples/shapes.html", "start": 4277640, "end": 4279474}, {"filename": "/examples/shapes.js", "start": 4279474, "end": 4770248}, {"filename": "/examples/shapes.wasm", "start": 4770248, "end": 4915777}, {"filename": "/examples/stb_image.h", "start": 4915777, "end": 5195129}, {"filename": "/examples/tex.jpg", "start": 5195129, "end": 5219737}, {"filename": "/examples/text.c", "start": 5219737, "end": 5223215}, {"filename": "/examples/textures.c", "start": 5223215, "end": 5225817}, {"filename": "/examples/textures.data", "start": 5225817, "end": 11164352}, {"filename": "/examples/textures.html", "start": 11164352, "end": 11166190}, {"filename": "/examples/textures.js", "start": 11166190, "end": 11657368}, {"filename": "/examples/textures.wasm", "start": 11657368, "end": 12238249}, {"filename": "/examples/wall.jpg", "start": 12238249, "end": 12279476}, {"filename": "/examples/wall2.jpg", "start": 12279476, "end": 12580036}, {"filename": "/index.html", "start": 12580036, "end": 12582734}, {"filename": "/tex.jpg", "start": 12582734, "end": 12607342}, {"filename": "/wall.jpg", "start": 12607342, "end": 12648569}, {"filename": "/wall2.jpg", "start": 12648569, "end": 12949129}], "remote_package_size": 12949129});
 
   })();
 
@@ -1223,13 +1221,21 @@ function dbg(text) {
 // === Body ===
 
 var ASM_CONSTS = {
-  80612: () => { Module.canvas.focus(); },  
- 80637: () => { return window.innerWidth; },  
- 80667: () => { return window.innerHeight; },  
- 80698: () => { Module.useWebGL = true; GLImmediate.init(); },  
- 80744: () => { var canvas = document.getElementById('canvas'); canvas.addEventListener('drop', function(e) { e.preventDefault(); if (e.dataTransfer.file < 0) return; var filenamesArray = []; var count = e.dataTransfer.files.length; var drop_dir = '.rgfw_dropped_files'; Module._RGFW_mkdir(drop_dir); for (var i = 0; i < count; i++) { var file = e.dataTransfer.files[i]; var path = '/' + drop_dir + '/' + file.name.replace("//", '_'); var reader = new FileReader(); reader.onloadend = (e) => { if (reader.readyState != 2) { out('failed to read dropped file: '+file.name+': '+reader.error); } else { var data = e.target.result; _RGFW_writeFile(path, new Uint8Array(data), file.size); } }; reader.readAsArrayBuffer(file); var filename = stringToNewUTF8(path); filenamesArray.push(filename); Module._RGFW_makeSetValue(i, filename); } Module._Emscripten_onDrop(count); for (var i = 0; i < count; ++i) { _free(filenamesArray[i]); } }, true); canvas.addEventListener('dragover', function(e) { e.preventDefault(); return false; }, true); },  
- 81763: () => { document.getElementById('canvas').style.cursor = 'none'; },  
- 81820: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); }
+  82788: () => { Module.canvas.focus(); },  
+ 82813: () => { Module.useWebGL = true; GLImmediate.init(); },  
+ 82859: () => { window.addEventListener("keydown", (event) => { var key = stringToNewUTF8(event.key); var code = stringToNewUTF8(event.code); Module._RGFW_handleKeyMods(event.getModifierState("CapsLock"), event.getModifierState("NumLock"), event.getModifierState("Control"), event.getModifierState("Alt"), event.getModifierState("Shift"), event.getModifierState("Meta"), event.getModifierState("ScrollLock")); Module._RGFW_handleKeyEvent(key, code, 1); _free(key); _free(code); }, true); window.addEventListener("keyup", (event) => { var key = stringToNewUTF8(event.key); var code = stringToNewUTF8(event.code); Module._RGFW_handleKeyMods(event.getModifierState("CapsLock"), event.getModifierState("NumLock"), event.getModifierState("Control"), event.getModifierState("Alt"), event.getModifierState("Shift"), event.getModifierState("Meta"), event.getModifierState("ScrollLock")); Module._RGFW_handleKeyEvent(key, code, 0); _free(key); _free(code); }, true); },  
+ 83805: () => { var canvas = document.getElementById('canvas'); canvas.addEventListener('drop', function(e) { e.preventDefault(); if (e.dataTransfer.file < 0) return; var filenamesArray = []; var count = e.dataTransfer.files.length; var drop_dir = '.rgfw_dropped_files'; Module._RGFW_mkdir(drop_dir); for (var i = 0; i < count; i++) { var file = e.dataTransfer.files[i]; var path = '/' + drop_dir + '/' + file.name.replace("//", '_'); var reader = new FileReader(); reader.onloadend = (e) => { if (reader.readyState != 2) { out('failed to read dropped file: '+file.name+': '+reader.error); } else { var data = e.target.result; _RGFW_writeFile(path, new Uint8Array(data), file.size); } }; reader.readAsArrayBuffer(file); var filename = stringToNewUTF8(path); filenamesArray.push(filename); Module._RGFW_makeSetValue(i, filename); } Module._Emscripten_onDrop(count); for (var i = 0; i < count; ++i) { _free(filenamesArray[i]); } }, true); canvas.addEventListener('dragover', function(e) { e.preventDefault(); return false; }, true); },  
+ 84824: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
+ 84895: () => { document.getElementById('canvas').style.cursor = 'none'; },  
+ 84952: () => { return window.mouseX || 0; },  
+ 84983: () => { return window.mouseY || 0; },  
+ 85014: ($0) => { var canvas = document.getElementById('canvas'); if ($0) { canvas.style.pointerEvents = 'none'; } else { canvas.style.pointerEvents = 'auto'; } },  
+ 85161: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
+ 85214: () => { return window.innerWidth; },  
+ 85244: () => { return window.innerHeight; },  
+ 85275: () => { Module.requestFullscreen(false, true); },  
+ 85314: () => { Module.exitFullscreen(false, true); },  
+ 85350: ($0, $1) => { var element = document.getElementById("canvas"); if (element) element.style.opacity = $1; }
 };
 
 
@@ -4570,6 +4576,13 @@ var ASM_CONSTS = {
       return 0;
     };
 
+  var _emscripten_get_now;
+      // Modern environment where performance.now() is supported:
+      // N.B. a shorter form "_emscripten_get_now = performance.now;" is
+      // unfortunately not allowed even in current browsers (e.g. FF Nightly 75).
+      _emscripten_get_now = () => performance.now();
+  ;
+
   var _emscripten_get_num_gamepads = () => {
       if (!JSEvents.lastGamepadState) throw 'emscripten_get_num_gamepads() can only be called after having first called emscripten_sample_gamepad_data() and that function has returned EMSCRIPTEN_RESULT_SUCCESS!';
       // N.B. Do not call emscripten_get_num_gamepads() unless having first called emscripten_sample_gamepad_data(), and that has returned EMSCRIPTEN_RESULT_SUCCESS.
@@ -5040,52 +5053,6 @@ var ASM_CONSTS = {
   
   
   
-  var registerKeyEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
-      if (!JSEvents.keyEvent) JSEvents.keyEvent = _malloc(176);
-  
-      var keyEventHandlerFunc = (e) => {
-        assert(e);
-  
-        var keyEventData = JSEvents.keyEvent;
-        HEAPF64[((keyEventData)>>3)] = e.timeStamp;
-  
-        var idx =((keyEventData)>>2);
-  
-        HEAP32[idx + 2] = e.location;
-        HEAP32[idx + 3] = e.ctrlKey;
-        HEAP32[idx + 4] = e.shiftKey;
-        HEAP32[idx + 5] = e.altKey;
-        HEAP32[idx + 6] = e.metaKey;
-        HEAP32[idx + 7] = e.repeat;
-        HEAP32[idx + 8] = e.charCode;
-        HEAP32[idx + 9] = e.keyCode;
-        HEAP32[idx + 10] = e.which;
-        stringToUTF8(e.key || '', keyEventData + 44, 32);
-        stringToUTF8(e.code || '', keyEventData + 76, 32);
-        stringToUTF8(e.char || '', keyEventData + 108, 32);
-        stringToUTF8(e.locale || '', keyEventData + 140, 32);
-  
-        if (((a1, a2, a3) => dynCall_iiii.apply(null, [callbackfunc, a1, a2, a3]))(eventTypeId, keyEventData, userData)) e.preventDefault();
-      };
-  
-      var eventHandler = {
-        target: findEventTarget(target),
-        eventTypeString,
-        callbackfunc,
-        handlerFunc: keyEventHandlerFunc,
-        useCapture
-      };
-      return JSEvents.registerOrRemoveHandler(eventHandler);
-    };
-  var _emscripten_set_keydown_callback_on_thread = (target, userData, useCapture, callbackfunc, targetThread) =>
-      registerKeyEventCallback(target, userData, useCapture, callbackfunc, 2, "keydown", targetThread);
-
-  var _emscripten_set_keyup_callback_on_thread = (target, userData, useCapture, callbackfunc, targetThread) =>
-      registerKeyEventCallback(target, userData, useCapture, callbackfunc, 3, "keyup", targetThread);
-
-  
-  
-  
   var fillMouseEventData = (eventStruct, e, target) => {
       assert(eventStruct % 4 == 0);
       HEAPF64[((eventStruct)>>3)] = e.timeStamp;
@@ -5378,12 +5345,6 @@ var ASM_CONSTS = {
       return 0;
     };
   
-  var _emscripten_get_now;
-      // Modern environment where performance.now() is supported:
-      // N.B. a shorter form "_emscripten_get_now = performance.now;" is
-      // unfortunately not allowed even in current browsers (e.g. FF Nightly 75).
-      _emscripten_get_now = () => performance.now();
-  ;
   
   
     /**
@@ -12238,6 +12199,8 @@ var wasmImports = {
   /** @export */
   emscripten_get_gamepad_status: _emscripten_get_gamepad_status,
   /** @export */
+  emscripten_get_now: _emscripten_get_now,
+  /** @export */
   emscripten_get_num_gamepads: _emscripten_get_num_gamepads,
   /** @export */
   emscripten_memcpy_js: _emscripten_memcpy_js,
@@ -12261,10 +12224,6 @@ var wasmImports = {
   emscripten_set_gamepadconnected_callback_on_thread: _emscripten_set_gamepadconnected_callback_on_thread,
   /** @export */
   emscripten_set_gamepaddisconnected_callback_on_thread: _emscripten_set_gamepaddisconnected_callback_on_thread,
-  /** @export */
-  emscripten_set_keydown_callback_on_thread: _emscripten_set_keydown_callback_on_thread,
-  /** @export */
-  emscripten_set_keyup_callback_on_thread: _emscripten_set_keyup_callback_on_thread,
   /** @export */
   emscripten_set_mousedown_callback_on_thread: _emscripten_set_mousedown_callback_on_thread,
   /** @export */
@@ -12335,12 +12294,14 @@ var wasmImports = {
 Asyncify.instrumentWasmImports(wasmImports);
 var wasmExports = createWasm();
 var ___wasm_call_ctors = createExportWrapper('__wasm_call_ctors');
+var _free = createExportWrapper('free');
+var _malloc = createExportWrapper('malloc');
+var _RGFW_handleKeyEvent = Module['_RGFW_handleKeyEvent'] = createExportWrapper('RGFW_handleKeyEvent');
+var _RGFW_handleKeyMods = Module['_RGFW_handleKeyMods'] = createExportWrapper('RGFW_handleKeyMods');
 var _Emscripten_onDrop = Module['_Emscripten_onDrop'] = createExportWrapper('Emscripten_onDrop');
 var _RGFW_makeSetValue = Module['_RGFW_makeSetValue'] = createExportWrapper('RGFW_makeSetValue');
 var _RGFW_mkdir = Module['_RGFW_mkdir'] = createExportWrapper('RGFW_mkdir');
 var _RGFW_writeFile = Module['_RGFW_writeFile'] = createExportWrapper('RGFW_writeFile');
-var _free = createExportWrapper('free');
-var _malloc = createExportWrapper('malloc');
 var _main = Module['_main'] = createExportWrapper('main');
 var _fflush = createExportWrapper('fflush');
 var _emscripten_stack_init = () => (_emscripten_stack_init = wasmExports['emscripten_stack_init'])();
@@ -12356,8 +12317,10 @@ var dynCall_viii = Module['dynCall_viii'] = createExportWrapper('dynCall_viii');
 var dynCall_viiiiii = Module['dynCall_viiiiii'] = createExportWrapper('dynCall_viiiiii');
 var dynCall_iiiiii = Module['dynCall_iiiiii'] = createExportWrapper('dynCall_iiiiii');
 var dynCall_vii = Module['dynCall_vii'] = createExportWrapper('dynCall_vii');
+var dynCall_vi = Module['dynCall_vi'] = createExportWrapper('dynCall_vi');
 var dynCall_viiiii = Module['dynCall_viiiii'] = createExportWrapper('dynCall_viiiii');
 var dynCall_viidi = Module['dynCall_viidi'] = createExportWrapper('dynCall_viidi');
+var dynCall_viiii = Module['dynCall_viiii'] = createExportWrapper('dynCall_viiii');
 var dynCall_ii = Module['dynCall_ii'] = createExportWrapper('dynCall_ii');
 var dynCall_jiji = Module['dynCall_jiji'] = createExportWrapper('dynCall_jiji');
 var _asyncify_start_unwind = createExportWrapper('asyncify_start_unwind');
@@ -12440,6 +12403,7 @@ var missingLibrarySymbols = [
   'stringToUTF32',
   'lengthBytesUTF32',
   'writeArrayToMemory',
+  'registerKeyEventCallback',
   'fillDeviceOrientationEventData',
   'registerDeviceOrientationEventCallback',
   'fillDeviceMotionEventData',
@@ -12583,7 +12547,6 @@ var unexportedSymbols = [
   'UTF16Decoder',
   'stringToUTF8OnStack',
   'JSEvents',
-  'registerKeyEventCallback',
   'specialHTMLTargets',
   'maybeCStringToJsString',
   'findEventTarget',

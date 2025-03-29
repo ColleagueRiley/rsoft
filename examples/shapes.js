@@ -131,33 +131,31 @@ Module['FS_createPath']("/.git/logs/refs", "heads", true, true);
 Module['FS_createPath']("/.git/logs/refs", "remotes", true, true);
 Module['FS_createPath']("/.git/logs/refs/remotes", "origin", true, true);
 Module['FS_createPath']("/.git", "objects", true, true);
-Module['FS_createPath']("/.git/objects", "0e", true, true);
 Module['FS_createPath']("/.git/objects", "0f", true, true);
 Module['FS_createPath']("/.git/objects", "14", true, true);
-Module['FS_createPath']("/.git/objects", "25", true, true);
-Module['FS_createPath']("/.git/objects", "2d", true, true);
+Module['FS_createPath']("/.git/objects", "1b", true, true);
 Module['FS_createPath']("/.git/objects", "41", true, true);
-Module['FS_createPath']("/.git/objects", "4d", true, true);
 Module['FS_createPath']("/.git/objects", "53", true, true);
-Module['FS_createPath']("/.git/objects", "55", true, true);
 Module['FS_createPath']("/.git/objects", "5a", true, true);
 Module['FS_createPath']("/.git/objects", "5e", true, true);
+Module['FS_createPath']("/.git/objects", "63", true, true);
 Module['FS_createPath']("/.git/objects", "65", true, true);
-Module['FS_createPath']("/.git/objects", "6e", true, true);
 Module['FS_createPath']("/.git/objects", "7d", true, true);
 Module['FS_createPath']("/.git/objects", "83", true, true);
 Module['FS_createPath']("/.git/objects", "8b", true, true);
+Module['FS_createPath']("/.git/objects", "98", true, true);
+Module['FS_createPath']("/.git/objects", "9d", true, true);
 Module['FS_createPath']("/.git/objects", "a6", true, true);
 Module['FS_createPath']("/.git/objects", "af", true, true);
 Module['FS_createPath']("/.git/objects", "bd", true, true);
-Module['FS_createPath']("/.git/objects", "c3", true, true);
 Module['FS_createPath']("/.git/objects", "ce", true, true);
 Module['FS_createPath']("/.git/objects", "cf", true, true);
+Module['FS_createPath']("/.git/objects", "d1", true, true);
 Module['FS_createPath']("/.git/objects", "d5", true, true);
-Module['FS_createPath']("/.git/objects", "e0", true, true);
 Module['FS_createPath']("/.git/objects", "e6", true, true);
 Module['FS_createPath']("/.git/objects", "eb", true, true);
 Module['FS_createPath']("/.git/objects", "f1", true, true);
+Module['FS_createPath']("/.git/objects", "f5", true, true);
 Module['FS_createPath']("/.git/objects", "f7", true, true);
 Module['FS_createPath']("/.git/objects", "fa", true, true);
 Module['FS_createPath']("/.git", "refs", true, true);
@@ -234,7 +232,7 @@ Module['FS_createPath']("/", "examples", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/.git/FETCH_HEAD", "start": 0, "end": 128}, {"filename": "/.git/HEAD", "start": 128, "end": 149}, {"filename": "/.git/config", "start": 149, "end": 566}, {"filename": "/.git/description", "start": 566, "end": 639}, {"filename": "/.git/hooks/applypatch-msg.sample", "start": 639, "end": 1117}, {"filename": "/.git/hooks/commit-msg.sample", "start": 1117, "end": 2013}, {"filename": "/.git/hooks/fsmonitor-watchman.sample", "start": 2013, "end": 6739}, {"filename": "/.git/hooks/post-update.sample", "start": 6739, "end": 6928}, {"filename": "/.git/hooks/pre-applypatch.sample", "start": 6928, "end": 7352}, {"filename": "/.git/hooks/pre-commit.sample", "start": 7352, "end": 9001}, {"filename": "/.git/hooks/pre-merge-commit.sample", "start": 9001, "end": 9417}, {"filename": "/.git/hooks/pre-push.sample", "start": 9417, "end": 10791}, {"filename": "/.git/hooks/pre-rebase.sample", "start": 10791, "end": 15689}, {"filename": "/.git/hooks/pre-receive.sample", "start": 15689, "end": 16233}, {"filename": "/.git/hooks/prepare-commit-msg.sample", "start": 16233, "end": 17725}, {"filename": "/.git/hooks/push-to-checkout.sample", "start": 17725, "end": 20508}, {"filename": "/.git/hooks/sendemail-validate.sample", "start": 20508, "end": 22816}, {"filename": "/.git/hooks/update.sample", "start": 22816, "end": 26466}, {"filename": "/.git/index", "start": 26466, "end": 28896}, {"filename": "/.git/info/exclude", "start": 28896, "end": 29136}, {"filename": "/.git/logs/HEAD", "start": 29136, "end": 29355}, {"filename": "/.git/logs/refs/heads/main", "start": 29355, "end": 29583}, {"filename": "/.git/logs/refs/remotes/origin/main", "start": 29583, "end": 29921}, {"filename": "/.git/objects/0e/ebc8e1b6902619c6665ba25c03af2a58a0f674", "start": 29921, "end": 31787}, {"filename": "/.git/objects/0f/c185a865fca3db2820ee628bd9ecb6265b188c", "start": 31787, "end": 66636}, {"filename": "/.git/objects/14/60cee34b658ea04936fff7449c024775fc4ad4", "start": 66636, "end": 67552}, {"filename": "/.git/objects/25/203eb7390f8a8a06edc7efec1757706ba8685f", "start": 67552, "end": 67983}, {"filename": "/.git/objects/2d/6831b66ef0b3724f8205eb3d9fab0706c66ff5", "start": 67983, "end": 68481}, {"filename": "/.git/objects/41/53a179623633360c8126a24d09a769bbcded3c", "start": 68481, "end": 68975}, {"filename": "/.git/objects/4d/de4e96ec37111a1ea30e520074e5c08eed87e3", "start": 68975, "end": 70348}, {"filename": "/.git/objects/53/d6bbaf9307c2ed1f5922382e55fd267d6eeae8", "start": 70348, "end": 70683}, {"filename": "/.git/objects/55/cf6cfb0c0bac14bd7bea1584d514efd5490120", "start": 70683, "end": 72101}, {"filename": "/.git/objects/5a/66932a94dbea89753f39cdebf536200411edf4", "start": 72101, "end": 155655}, {"filename": "/.git/objects/5e/d13980bb60ac705d14b2ad101358a6f9996553", "start": 155655, "end": 180229}, {"filename": "/.git/objects/65/4efa532bd1a2d2bdeb26aef8591f664973da06", "start": 180229, "end": 181026}, {"filename": "/.git/objects/6e/025a56b16b2e63bd2669d6fd9719bd64bfa9f6", "start": 181026, "end": 181191}, {"filename": "/.git/objects/7d/067c6c36e8309c7b1bdcb7856992734adaa44f", "start": 181191, "end": 181354}, {"filename": "/.git/objects/83/1e3d867aebc4f88d3168b1ac7df2b7ba8a6ee5", "start": 181354, "end": 277306}, {"filename": "/.git/objects/8b/8721151861f97daa08a19117b5ecf936c4bc26", "start": 277306, "end": 278222}, {"filename": "/.git/objects/a6/df3be03d203b5512a3fbf45f5ef744cac58081", "start": 278222, "end": 577334}, {"filename": "/.git/objects/af/8f7125706d1be4f779f1e25891fdfd7cf04b45", "start": 577334, "end": 577386}, {"filename": "/.git/objects/bd/23dad6e7eeb0460b99639219dfb6229e924e50", "start": 577386, "end": 578301}, {"filename": "/.git/objects/c3/1a167d4e0c0689b9951544a13381b6a5e39d3f", "start": 578301, "end": 666019}, {"filename": "/.git/objects/ce/653a319e4bfe267f249593914525aede494c0c", "start": 666019, "end": 666936}, {"filename": "/.git/objects/cf/f94232397445507436b5031793ea18c95105f7", "start": 666936, "end": 673249}, {"filename": "/.git/objects/d5/782190e1855f0b30cf1f8bd6cd18ec5fbea3ba", "start": 673249, "end": 674216}, {"filename": "/.git/objects/e0/a69c14e3f3297bb57fb6e4e2fbf8efe8eb8ff5", "start": 674216, "end": 675141}, {"filename": "/.git/objects/e6/9b02fda1a77ea7dd314a008a941d20bea7d8db", "start": 675141, "end": 675622}, {"filename": "/.git/objects/eb/3089deb84fb3f6808821c19a1661c3505d0dbe", "start": 675622, "end": 714859}, {"filename": "/.git/objects/f1/24e13e577f742ea9a24aad4ed9f301db2de7f5", "start": 714859, "end": 753557}, {"filename": "/.git/objects/f7/129e90ae35c48ae2c3244c5cad023192924106", "start": 753557, "end": 754705}, {"filename": "/.git/objects/fa/d4b4b5b9d3916d9812eae757f00eeea83ad51b", "start": 754705, "end": 754757}, {"filename": "/.git/refs/heads/main", "start": 754757, "end": 754798}, {"filename": "/.git/refs/remotes/origin/main", "start": 754798, "end": 754839}, {"filename": "/.git/shallow", "start": 754839, "end": 754880}, {"filename": "/.github/workflows/web.yml", "start": 754880, "end": 755443}, {"filename": "/COMICSANS.ttf", "start": 755443, "end": 890927}, {"filename": "/LICENSE", "start": 890927, "end": 891803}, {"filename": "/Makefile", "start": 891803, "end": 894135}, {"filename": "/README.md", "start": 894135, "end": 895532}, {"filename": "/RSoft.h", "start": 895532, "end": 917899}, {"filename": "/RSoft_logo.png", "start": 917899, "end": 960094}, {"filename": "/TODO", "start": 960094, "end": 960300}, {"filename": "/examples/COMICSANS.ttf", "start": 960300, "end": 1095784}, {"filename": "/examples/RFont.h", "start": 1095784, "end": 1216547}, {"filename": "/examples/RGFW.h", "start": 1216547, "end": 1515646}, {"filename": "/examples/doom-like.c", "start": 1515646, "end": 1520048}, {"filename": "/examples/doom-like.html", "start": 1520048, "end": 1521888}, {"filename": "/examples/raycaster.c", "start": 1521888, "end": 1528428}, {"filename": "/examples/raycaster.html", "start": 1528428, "end": 1530268}, {"filename": "/examples/shapes.c", "start": 1530268, "end": 1532413}, {"filename": "/examples/shapes.html", "start": 1532413, "end": 1534247}, {"filename": "/examples/stb_image.h", "start": 1534247, "end": 1813599}, {"filename": "/examples/tex.jpg", "start": 1813599, "end": 1838207}, {"filename": "/examples/text.c", "start": 1838207, "end": 1841644}, {"filename": "/examples/textures.c", "start": 1841644, "end": 1844187}, {"filename": "/examples/textures.html", "start": 1844187, "end": 1846025}, {"filename": "/examples/wall.jpg", "start": 1846025, "end": 1887252}, {"filename": "/examples/wall2.jpg", "start": 1887252, "end": 2187812}, {"filename": "/index.html", "start": 2187812, "end": 2190510}, {"filename": "/tex.jpg", "start": 2190510, "end": 2215118}, {"filename": "/wall.jpg", "start": 2215118, "end": 2256345}, {"filename": "/wall2.jpg", "start": 2256345, "end": 2556905}], "remote_package_size": 2556905});
+    loadPackage({"files": [{"filename": "/.git/FETCH_HEAD", "start": 0, "end": 128}, {"filename": "/.git/HEAD", "start": 128, "end": 149}, {"filename": "/.git/config", "start": 149, "end": 566}, {"filename": "/.git/description", "start": 566, "end": 639}, {"filename": "/.git/hooks/applypatch-msg.sample", "start": 639, "end": 1117}, {"filename": "/.git/hooks/commit-msg.sample", "start": 1117, "end": 2013}, {"filename": "/.git/hooks/fsmonitor-watchman.sample", "start": 2013, "end": 6739}, {"filename": "/.git/hooks/post-update.sample", "start": 6739, "end": 6928}, {"filename": "/.git/hooks/pre-applypatch.sample", "start": 6928, "end": 7352}, {"filename": "/.git/hooks/pre-commit.sample", "start": 7352, "end": 9001}, {"filename": "/.git/hooks/pre-merge-commit.sample", "start": 9001, "end": 9417}, {"filename": "/.git/hooks/pre-push.sample", "start": 9417, "end": 10791}, {"filename": "/.git/hooks/pre-rebase.sample", "start": 10791, "end": 15689}, {"filename": "/.git/hooks/pre-receive.sample", "start": 15689, "end": 16233}, {"filename": "/.git/hooks/prepare-commit-msg.sample", "start": 16233, "end": 17725}, {"filename": "/.git/hooks/push-to-checkout.sample", "start": 17725, "end": 20508}, {"filename": "/.git/hooks/sendemail-validate.sample", "start": 20508, "end": 22816}, {"filename": "/.git/hooks/update.sample", "start": 22816, "end": 26466}, {"filename": "/.git/index", "start": 26466, "end": 28896}, {"filename": "/.git/info/exclude", "start": 28896, "end": 29136}, {"filename": "/.git/logs/HEAD", "start": 29136, "end": 29354}, {"filename": "/.git/logs/refs/heads/main", "start": 29354, "end": 29581}, {"filename": "/.git/logs/refs/remotes/origin/HEAD", "start": 29581, "end": 29768}, {"filename": "/.git/logs/refs/remotes/origin/main", "start": 29768, "end": 30105}, {"filename": "/.git/objects/0f/c185a865fca3db2820ee628bd9ecb6265b188c", "start": 30105, "end": 64954}, {"filename": "/.git/objects/14/60cee34b658ea04936fff7449c024775fc4ad4", "start": 64954, "end": 65870}, {"filename": "/.git/objects/1b/b7b8623b3c006e3fac7f2e1ee7dafcb3ef7b27", "start": 65870, "end": 67751}, {"filename": "/.git/objects/41/53a179623633360c8126a24d09a769bbcded3c", "start": 67751, "end": 68245}, {"filename": "/.git/objects/53/d6bbaf9307c2ed1f5922382e55fd267d6eeae8", "start": 68245, "end": 68580}, {"filename": "/.git/objects/5a/66932a94dbea89753f39cdebf536200411edf4", "start": 68580, "end": 152134}, {"filename": "/.git/objects/5e/d13980bb60ac705d14b2ad101358a6f9996553", "start": 152134, "end": 176708}, {"filename": "/.git/objects/63/ccc4a15801181cc58c1718a6a532b6ceaf7ff2", "start": 176708, "end": 178134}, {"filename": "/.git/objects/65/edf01bd5da4aad215ece99cf45a7dc58c61e18", "start": 178134, "end": 179075}, {"filename": "/.git/objects/7d/067c6c36e8309c7b1bdcb7856992734adaa44f", "start": 179075, "end": 179238}, {"filename": "/.git/objects/83/1e3d867aebc4f88d3168b1ac7df2b7ba8a6ee5", "start": 179238, "end": 275190}, {"filename": "/.git/objects/8b/8721151861f97daa08a19117b5ecf936c4bc26", "start": 275190, "end": 276106}, {"filename": "/.git/objects/98/acbf927fd3a0988f4878eec8ec8afec08ceb3a", "start": 276106, "end": 276603}, {"filename": "/.git/objects/98/cd72bc5ef0d71aa522220a5e22393b9c99d061", "start": 276603, "end": 277400}, {"filename": "/.git/objects/9d/bf8648ca6a3c4a1dc92d308bd16d136aa8525e", "start": 277400, "end": 278783}, {"filename": "/.git/objects/a6/df3be03d203b5512a3fbf45f5ef744cac58081", "start": 278783, "end": 577895}, {"filename": "/.git/objects/af/728a8564d21a2d3a432f7aa6cb277e4134c112", "start": 577895, "end": 578328}, {"filename": "/.git/objects/af/8f7125706d1be4f779f1e25891fdfd7cf04b45", "start": 578328, "end": 578380}, {"filename": "/.git/objects/bd/23dad6e7eeb0460b99639219dfb6229e924e50", "start": 578380, "end": 579295}, {"filename": "/.git/objects/ce/653a319e4bfe267f249593914525aede494c0c", "start": 579295, "end": 580212}, {"filename": "/.git/objects/cf/f94232397445507436b5031793ea18c95105f7", "start": 580212, "end": 586525}, {"filename": "/.git/objects/d1/ce175a459359278b581585ed2c07849323f192", "start": 586525, "end": 694660}, {"filename": "/.git/objects/d5/782190e1855f0b30cf1f8bd6cd18ec5fbea3ba", "start": 694660, "end": 695627}, {"filename": "/.git/objects/e6/9b02fda1a77ea7dd314a008a941d20bea7d8db", "start": 695627, "end": 696108}, {"filename": "/.git/objects/eb/3089deb84fb3f6808821c19a1661c3505d0dbe", "start": 696108, "end": 735345}, {"filename": "/.git/objects/f1/24e13e577f742ea9a24aad4ed9f301db2de7f5", "start": 735345, "end": 774043}, {"filename": "/.git/objects/f5/48c93eeecd1c318f521df53a791e62e696841b", "start": 774043, "end": 774206}, {"filename": "/.git/objects/f7/129e90ae35c48ae2c3244c5cad023192924106", "start": 774206, "end": 775354}, {"filename": "/.git/objects/fa/d4b4b5b9d3916d9812eae757f00eeea83ad51b", "start": 775354, "end": 775406}, {"filename": "/.git/refs/heads/main", "start": 775406, "end": 775447}, {"filename": "/.git/refs/remotes/origin/HEAD", "start": 775447, "end": 775477}, {"filename": "/.git/refs/remotes/origin/main", "start": 775477, "end": 775518}, {"filename": "/.git/shallow", "start": 775518, "end": 775559}, {"filename": "/.github/workflows/web.yml", "start": 775559, "end": 776122}, {"filename": "/COMICSANS.ttf", "start": 776122, "end": 911606}, {"filename": "/LICENSE", "start": 911606, "end": 912482}, {"filename": "/Makefile", "start": 912482, "end": 914814}, {"filename": "/README.md", "start": 914814, "end": 916211}, {"filename": "/RSoft.h", "start": 916211, "end": 938578}, {"filename": "/RSoft_logo.png", "start": 938578, "end": 980773}, {"filename": "/TODO", "start": 980773, "end": 980979}, {"filename": "/examples/COMICSANS.ttf", "start": 980979, "end": 1116463}, {"filename": "/examples/RFont.h", "start": 1116463, "end": 1237226}, {"filename": "/examples/RGFW.h", "start": 1237226, "end": 1609631}, {"filename": "/examples/doom-like.c", "start": 1609631, "end": 1614093}, {"filename": "/examples/doom-like.html", "start": 1614093, "end": 1615933}, {"filename": "/examples/raycaster.c", "start": 1615933, "end": 1622534}, {"filename": "/examples/raycaster.html", "start": 1622534, "end": 1624374}, {"filename": "/examples/shapes.c", "start": 1624374, "end": 1626524}, {"filename": "/examples/shapes.html", "start": 1626524, "end": 1628358}, {"filename": "/examples/stb_image.h", "start": 1628358, "end": 1907710}, {"filename": "/examples/tex.jpg", "start": 1907710, "end": 1932318}, {"filename": "/examples/text.c", "start": 1932318, "end": 1935796}, {"filename": "/examples/textures.c", "start": 1935796, "end": 1938398}, {"filename": "/examples/textures.html", "start": 1938398, "end": 1940236}, {"filename": "/examples/wall.jpg", "start": 1940236, "end": 1981463}, {"filename": "/examples/wall2.jpg", "start": 1981463, "end": 2282023}, {"filename": "/index.html", "start": 2282023, "end": 2284721}, {"filename": "/tex.jpg", "start": 2284721, "end": 2309329}, {"filename": "/wall.jpg", "start": 2309329, "end": 2350556}, {"filename": "/wall2.jpg", "start": 2350556, "end": 2651116}], "remote_package_size": 2651116});
 
   })();
 
@@ -1223,13 +1221,21 @@ function dbg(text) {
 // === Body ===
 
 var ASM_CONSTS = {
-  70564: () => { Module.canvas.focus(); },  
- 70589: () => { return window.innerWidth; },  
- 70619: () => { return window.innerHeight; },  
- 70650: () => { Module.useWebGL = true; GLImmediate.init(); },  
- 70696: () => { var canvas = document.getElementById('canvas'); canvas.addEventListener('drop', function(e) { e.preventDefault(); if (e.dataTransfer.file < 0) return; var filenamesArray = []; var count = e.dataTransfer.files.length; var drop_dir = '.rgfw_dropped_files'; Module._RGFW_mkdir(drop_dir); for (var i = 0; i < count; i++) { var file = e.dataTransfer.files[i]; var path = '/' + drop_dir + '/' + file.name.replace("//", '_'); var reader = new FileReader(); reader.onloadend = (e) => { if (reader.readyState != 2) { out('failed to read dropped file: '+file.name+': '+reader.error); } else { var data = e.target.result; _RGFW_writeFile(path, new Uint8Array(data), file.size); } }; reader.readAsArrayBuffer(file); var filename = stringToNewUTF8(path); filenamesArray.push(filename); Module._RGFW_makeSetValue(i, filename); } Module._Emscripten_onDrop(count); for (var i = 0; i < count; ++i) { _free(filenamesArray[i]); } }, true); canvas.addEventListener('dragover', function(e) { e.preventDefault(); return false; }, true); },  
- 71715: () => { document.getElementById('canvas').style.cursor = 'none'; },  
- 71772: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); }
+  72756: () => { Module.canvas.focus(); },  
+ 72781: () => { Module.useWebGL = true; GLImmediate.init(); },  
+ 72827: () => { window.addEventListener("keydown", (event) => { var key = stringToNewUTF8(event.key); var code = stringToNewUTF8(event.code); Module._RGFW_handleKeyMods(event.getModifierState("CapsLock"), event.getModifierState("NumLock"), event.getModifierState("Control"), event.getModifierState("Alt"), event.getModifierState("Shift"), event.getModifierState("Meta"), event.getModifierState("ScrollLock")); Module._RGFW_handleKeyEvent(key, code, 1); _free(key); _free(code); }, true); window.addEventListener("keyup", (event) => { var key = stringToNewUTF8(event.key); var code = stringToNewUTF8(event.code); Module._RGFW_handleKeyMods(event.getModifierState("CapsLock"), event.getModifierState("NumLock"), event.getModifierState("Control"), event.getModifierState("Alt"), event.getModifierState("Shift"), event.getModifierState("Meta"), event.getModifierState("ScrollLock")); Module._RGFW_handleKeyEvent(key, code, 0); _free(key); _free(code); }, true); },  
+ 73773: () => { var canvas = document.getElementById('canvas'); canvas.addEventListener('drop', function(e) { e.preventDefault(); if (e.dataTransfer.file < 0) return; var filenamesArray = []; var count = e.dataTransfer.files.length; var drop_dir = '.rgfw_dropped_files'; Module._RGFW_mkdir(drop_dir); for (var i = 0; i < count; i++) { var file = e.dataTransfer.files[i]; var path = '/' + drop_dir + '/' + file.name.replace("//", '_'); var reader = new FileReader(); reader.onloadend = (e) => { if (reader.readyState != 2) { out('failed to read dropped file: '+file.name+': '+reader.error); } else { var data = e.target.result; _RGFW_writeFile(path, new Uint8Array(data), file.size); } }; reader.readAsArrayBuffer(file); var filename = stringToNewUTF8(path); filenamesArray.push(filename); Module._RGFW_makeSetValue(i, filename); } Module._Emscripten_onDrop(count); for (var i = 0; i < count; ++i) { _free(filenamesArray[i]); } }, true); canvas.addEventListener('dragover', function(e) { e.preventDefault(); return false; }, true); },  
+ 74792: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
+ 74863: () => { document.getElementById('canvas').style.cursor = 'none'; },  
+ 74920: () => { return window.mouseX || 0; },  
+ 74951: () => { return window.mouseY || 0; },  
+ 74982: ($0) => { var canvas = document.getElementById('canvas'); if ($0) { canvas.style.pointerEvents = 'none'; } else { canvas.style.pointerEvents = 'auto'; } },  
+ 75129: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
+ 75182: () => { return window.innerWidth; },  
+ 75212: () => { return window.innerHeight; },  
+ 75243: () => { Module.requestFullscreen(false, true); },  
+ 75282: () => { Module.exitFullscreen(false, true); },  
+ 75318: ($0, $1) => { var element = document.getElementById("canvas"); if (element) element.style.opacity = $1; }
 };
 
 
@@ -1306,6 +1312,83 @@ var ASM_CONSTS = {
         if (ENVIRONMENT_IS_NODE) text = 'warning: ' + text;
         err(text);
       }
+    };
+
+  var UTF8Decoder = typeof TextDecoder != 'undefined' ? new TextDecoder('utf8') : undefined;
+  
+    /**
+     * Given a pointer 'idx' to a null-terminated UTF8-encoded string in the given
+     * array that contains uint8 values, returns a copy of that string as a
+     * Javascript String object.
+     * heapOrArray is either a regular array, or a JavaScript typed array view.
+     * @param {number} idx
+     * @param {number=} maxBytesToRead
+     * @return {string}
+     */
+  var UTF8ArrayToString = (heapOrArray, idx, maxBytesToRead) => {
+      var endIdx = idx + maxBytesToRead;
+      var endPtr = idx;
+      // TextDecoder needs to know the byte length in advance, it doesn't stop on
+      // null terminator by itself.  Also, use the length info to avoid running tiny
+      // strings through TextDecoder, since .subarray() allocates garbage.
+      // (As a tiny code save trick, compare endPtr against endIdx using a negation,
+      // so that undefined means Infinity)
+      while (heapOrArray[endPtr] && !(endPtr >= endIdx)) ++endPtr;
+  
+      if (endPtr - idx > 16 && heapOrArray.buffer && UTF8Decoder) {
+        return UTF8Decoder.decode(heapOrArray.subarray(idx, endPtr));
+      }
+      var str = '';
+      // If building with TextDecoder, we have already computed the string length
+      // above, so test loop end condition against that
+      while (idx < endPtr) {
+        // For UTF8 byte structure, see:
+        // http://en.wikipedia.org/wiki/UTF-8#Description
+        // https://www.ietf.org/rfc/rfc2279.txt
+        // https://tools.ietf.org/html/rfc3629
+        var u0 = heapOrArray[idx++];
+        if (!(u0 & 0x80)) { str += String.fromCharCode(u0); continue; }
+        var u1 = heapOrArray[idx++] & 63;
+        if ((u0 & 0xE0) == 0xC0) { str += String.fromCharCode(((u0 & 31) << 6) | u1); continue; }
+        var u2 = heapOrArray[idx++] & 63;
+        if ((u0 & 0xF0) == 0xE0) {
+          u0 = ((u0 & 15) << 12) | (u1 << 6) | u2;
+        } else {
+          if ((u0 & 0xF8) != 0xF0) warnOnce('Invalid UTF-8 leading byte ' + ptrToString(u0) + ' encountered when deserializing a UTF-8 string in wasm memory to a JS string!');
+          u0 = ((u0 & 7) << 18) | (u1 << 12) | (u2 << 6) | (heapOrArray[idx++] & 63);
+        }
+  
+        if (u0 < 0x10000) {
+          str += String.fromCharCode(u0);
+        } else {
+          var ch = u0 - 0x10000;
+          str += String.fromCharCode(0xD800 | (ch >> 10), 0xDC00 | (ch & 0x3FF));
+        }
+      }
+      return str;
+    };
+  
+    /**
+     * Given a pointer 'ptr' to a null-terminated UTF8-encoded string in the
+     * emscripten HEAP, returns a copy of that string as a Javascript String object.
+     *
+     * @param {number} ptr
+     * @param {number=} maxBytesToRead - An optional length that specifies the
+     *   maximum number of bytes to read. You can omit this parameter to scan the
+     *   string until the first 0 byte. If maxBytesToRead is passed, and the string
+     *   at [ptr, ptr+maxBytesToReadr[ contains a null byte in the middle, then the
+     *   string will cut short at that byte index (i.e. maxBytesToRead will not
+     *   produce a string of exact length [ptr, ptr+maxBytesToRead[) N.B. mixing
+     *   frequent uses of UTF8ToString() with and without maxBytesToRead may throw
+     *   JS JIT optimizations off, so it is worth to consider consistently using one
+     * @return {string}
+     */
+  var UTF8ToString = (ptr, maxBytesToRead) => {
+      assert(typeof ptr == 'number', `UTF8ToString expects a number (got ${typeof ptr})`);
+      return ptr ? UTF8ArrayToString(HEAPU8, ptr, maxBytesToRead) : '';
+    };
+  var ___assert_fail = (condition, filename, line, func) => {
+      abort(`Assertion failed: ${UTF8ToString(condition)}, at: ` + [filename ? UTF8ToString(filename) : 'unknown filename', line, func ? UTF8ToString(func) : 'unknown function']);
     };
 
   var PATH = {
@@ -1470,59 +1553,6 @@ var ASM_CONSTS = {
   };
   
   
-  var UTF8Decoder = typeof TextDecoder != 'undefined' ? new TextDecoder('utf8') : undefined;
-  
-    /**
-     * Given a pointer 'idx' to a null-terminated UTF8-encoded string in the given
-     * array that contains uint8 values, returns a copy of that string as a
-     * Javascript String object.
-     * heapOrArray is either a regular array, or a JavaScript typed array view.
-     * @param {number} idx
-     * @param {number=} maxBytesToRead
-     * @return {string}
-     */
-  var UTF8ArrayToString = (heapOrArray, idx, maxBytesToRead) => {
-      var endIdx = idx + maxBytesToRead;
-      var endPtr = idx;
-      // TextDecoder needs to know the byte length in advance, it doesn't stop on
-      // null terminator by itself.  Also, use the length info to avoid running tiny
-      // strings through TextDecoder, since .subarray() allocates garbage.
-      // (As a tiny code save trick, compare endPtr against endIdx using a negation,
-      // so that undefined means Infinity)
-      while (heapOrArray[endPtr] && !(endPtr >= endIdx)) ++endPtr;
-  
-      if (endPtr - idx > 16 && heapOrArray.buffer && UTF8Decoder) {
-        return UTF8Decoder.decode(heapOrArray.subarray(idx, endPtr));
-      }
-      var str = '';
-      // If building with TextDecoder, we have already computed the string length
-      // above, so test loop end condition against that
-      while (idx < endPtr) {
-        // For UTF8 byte structure, see:
-        // http://en.wikipedia.org/wiki/UTF-8#Description
-        // https://www.ietf.org/rfc/rfc2279.txt
-        // https://tools.ietf.org/html/rfc3629
-        var u0 = heapOrArray[idx++];
-        if (!(u0 & 0x80)) { str += String.fromCharCode(u0); continue; }
-        var u1 = heapOrArray[idx++] & 63;
-        if ((u0 & 0xE0) == 0xC0) { str += String.fromCharCode(((u0 & 31) << 6) | u1); continue; }
-        var u2 = heapOrArray[idx++] & 63;
-        if ((u0 & 0xF0) == 0xE0) {
-          u0 = ((u0 & 15) << 12) | (u1 << 6) | u2;
-        } else {
-          if ((u0 & 0xF8) != 0xF0) warnOnce('Invalid UTF-8 leading byte ' + ptrToString(u0) + ' encountered when deserializing a UTF-8 string in wasm memory to a JS string!');
-          u0 = ((u0 & 7) << 18) | (u1 << 12) | (u2 << 6) | (heapOrArray[idx++] & 63);
-        }
-  
-        if (u0 < 0x10000) {
-          str += String.fromCharCode(u0);
-        } else {
-          var ch = u0 - 0x10000;
-          str += String.fromCharCode(0xD800 | (ch >> 10), 0xDC00 | (ch & 0x3FF));
-        }
-      }
-      return str;
-    };
   
   var FS_stdin_getChar_buffer = [];
   
@@ -4071,26 +4101,6 @@ var ASM_CONSTS = {
       },
   };
   
-  
-    /**
-     * Given a pointer 'ptr' to a null-terminated UTF8-encoded string in the
-     * emscripten HEAP, returns a copy of that string as a Javascript String object.
-     *
-     * @param {number} ptr
-     * @param {number=} maxBytesToRead - An optional length that specifies the
-     *   maximum number of bytes to read. You can omit this parameter to scan the
-     *   string until the first 0 byte. If maxBytesToRead is passed, and the string
-     *   at [ptr, ptr+maxBytesToReadr[ contains a null byte in the middle, then the
-     *   string will cut short at that byte index (i.e. maxBytesToRead will not
-     *   produce a string of exact length [ptr, ptr+maxBytesToRead[) N.B. mixing
-     *   frequent uses of UTF8ToString() with and without maxBytesToRead may throw
-     *   JS JIT optimizations off, so it is worth to consider consistently using one
-     * @return {string}
-     */
-  var UTF8ToString = (ptr, maxBytesToRead) => {
-      assert(typeof ptr == 'number', `UTF8ToString expects a number (got ${typeof ptr})`);
-      return ptr ? UTF8ArrayToString(HEAPU8, ptr, maxBytesToRead) : '';
-    };
   var SYSCALLS = {
   DEFAULT_POLLMASK:5,
   calculateAt(dirfd, path, allowEmpty) {
@@ -4566,6 +4576,13 @@ var ASM_CONSTS = {
       return 0;
     };
 
+  var _emscripten_get_now;
+      // Modern environment where performance.now() is supported:
+      // N.B. a shorter form "_emscripten_get_now = performance.now;" is
+      // unfortunately not allowed even in current browsers (e.g. FF Nightly 75).
+      _emscripten_get_now = () => performance.now();
+  ;
+
   var _emscripten_get_num_gamepads = () => {
       if (!JSEvents.lastGamepadState) throw 'emscripten_get_num_gamepads() can only be called after having first called emscripten_sample_gamepad_data() and that function has returned EMSCRIPTEN_RESULT_SUCCESS!';
       // N.B. Do not call emscripten_get_num_gamepads() unless having first called emscripten_sample_gamepad_data(), and that has returned EMSCRIPTEN_RESULT_SUCCESS.
@@ -4998,52 +5015,6 @@ var ASM_CONSTS = {
   
   
   
-  var registerKeyEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
-      if (!JSEvents.keyEvent) JSEvents.keyEvent = _malloc(176);
-  
-      var keyEventHandlerFunc = (e) => {
-        assert(e);
-  
-        var keyEventData = JSEvents.keyEvent;
-        HEAPF64[((keyEventData)>>3)] = e.timeStamp;
-  
-        var idx =((keyEventData)>>2);
-  
-        HEAP32[idx + 2] = e.location;
-        HEAP32[idx + 3] = e.ctrlKey;
-        HEAP32[idx + 4] = e.shiftKey;
-        HEAP32[idx + 5] = e.altKey;
-        HEAP32[idx + 6] = e.metaKey;
-        HEAP32[idx + 7] = e.repeat;
-        HEAP32[idx + 8] = e.charCode;
-        HEAP32[idx + 9] = e.keyCode;
-        HEAP32[idx + 10] = e.which;
-        stringToUTF8(e.key || '', keyEventData + 44, 32);
-        stringToUTF8(e.code || '', keyEventData + 76, 32);
-        stringToUTF8(e.char || '', keyEventData + 108, 32);
-        stringToUTF8(e.locale || '', keyEventData + 140, 32);
-  
-        if (((a1, a2, a3) => dynCall_iiii.apply(null, [callbackfunc, a1, a2, a3]))(eventTypeId, keyEventData, userData)) e.preventDefault();
-      };
-  
-      var eventHandler = {
-        target: findEventTarget(target),
-        eventTypeString,
-        callbackfunc,
-        handlerFunc: keyEventHandlerFunc,
-        useCapture
-      };
-      return JSEvents.registerOrRemoveHandler(eventHandler);
-    };
-  var _emscripten_set_keydown_callback_on_thread = (target, userData, useCapture, callbackfunc, targetThread) =>
-      registerKeyEventCallback(target, userData, useCapture, callbackfunc, 2, "keydown", targetThread);
-
-  var _emscripten_set_keyup_callback_on_thread = (target, userData, useCapture, callbackfunc, targetThread) =>
-      registerKeyEventCallback(target, userData, useCapture, callbackfunc, 3, "keyup", targetThread);
-
-  
-  
-  
   var fillMouseEventData = (eventStruct, e, target) => {
       assert(eventStruct % 4 == 0);
       HEAPF64[((eventStruct)>>3)] = e.timeStamp;
@@ -5336,12 +5307,6 @@ var ASM_CONSTS = {
       return 0;
     };
   
-  var _emscripten_get_now;
-      // Modern environment where performance.now() is supported:
-      // N.B. a shorter form "_emscripten_get_now = performance.now;" is
-      // unfortunately not allowed even in current browsers (e.g. FF Nightly 75).
-      _emscripten_get_now = () => performance.now();
-  ;
   
   
     /**
@@ -12182,6 +12147,8 @@ function checkIncomingModuleAPI() {
 }
 var wasmImports = {
   /** @export */
+  __assert_fail: ___assert_fail,
+  /** @export */
   __syscall_fcntl64: ___syscall_fcntl64,
   /** @export */
   __syscall_ioctl: ___syscall_ioctl,
@@ -12193,6 +12160,8 @@ var wasmImports = {
   emscripten_asm_const_int: _emscripten_asm_const_int,
   /** @export */
   emscripten_get_gamepad_status: _emscripten_get_gamepad_status,
+  /** @export */
+  emscripten_get_now: _emscripten_get_now,
   /** @export */
   emscripten_get_num_gamepads: _emscripten_get_num_gamepads,
   /** @export */
@@ -12215,10 +12184,6 @@ var wasmImports = {
   emscripten_set_gamepadconnected_callback_on_thread: _emscripten_set_gamepadconnected_callback_on_thread,
   /** @export */
   emscripten_set_gamepaddisconnected_callback_on_thread: _emscripten_set_gamepaddisconnected_callback_on_thread,
-  /** @export */
-  emscripten_set_keydown_callback_on_thread: _emscripten_set_keydown_callback_on_thread,
-  /** @export */
-  emscripten_set_keyup_callback_on_thread: _emscripten_set_keyup_callback_on_thread,
   /** @export */
   emscripten_set_mousedown_callback_on_thread: _emscripten_set_mousedown_callback_on_thread,
   /** @export */
@@ -12289,12 +12254,14 @@ var wasmImports = {
 Asyncify.instrumentWasmImports(wasmImports);
 var wasmExports = createWasm();
 var ___wasm_call_ctors = createExportWrapper('__wasm_call_ctors');
+var _free = createExportWrapper('free');
+var _malloc = createExportWrapper('malloc');
+var _RGFW_handleKeyEvent = Module['_RGFW_handleKeyEvent'] = createExportWrapper('RGFW_handleKeyEvent');
+var _RGFW_handleKeyMods = Module['_RGFW_handleKeyMods'] = createExportWrapper('RGFW_handleKeyMods');
 var _Emscripten_onDrop = Module['_Emscripten_onDrop'] = createExportWrapper('Emscripten_onDrop');
 var _RGFW_makeSetValue = Module['_RGFW_makeSetValue'] = createExportWrapper('RGFW_makeSetValue');
 var _RGFW_mkdir = Module['_RGFW_mkdir'] = createExportWrapper('RGFW_mkdir');
 var _RGFW_writeFile = Module['_RGFW_writeFile'] = createExportWrapper('RGFW_writeFile');
-var _free = createExportWrapper('free');
-var _malloc = createExportWrapper('malloc');
 var _main = Module['_main'] = createExportWrapper('main');
 var _fflush = createExportWrapper('fflush');
 var _emscripten_stack_init = () => (_emscripten_stack_init = wasmExports['emscripten_stack_init'])();
@@ -12307,9 +12274,11 @@ var stackAlloc = createExportWrapper('stackAlloc');
 var _emscripten_stack_get_current = () => (_emscripten_stack_get_current = wasmExports['emscripten_stack_get_current'])();
 var dynCall_iiii = Module['dynCall_iiii'] = createExportWrapper('dynCall_iiii');
 var dynCall_vii = Module['dynCall_vii'] = createExportWrapper('dynCall_vii');
+var dynCall_vi = Module['dynCall_vi'] = createExportWrapper('dynCall_vi');
 var dynCall_viii = Module['dynCall_viii'] = createExportWrapper('dynCall_viii');
 var dynCall_viiiii = Module['dynCall_viiiii'] = createExportWrapper('dynCall_viiiii');
 var dynCall_viidi = Module['dynCall_viidi'] = createExportWrapper('dynCall_viidi');
+var dynCall_viiii = Module['dynCall_viiii'] = createExportWrapper('dynCall_viiii');
 var dynCall_jiji = Module['dynCall_jiji'] = createExportWrapper('dynCall_jiji');
 var dynCall_ii = Module['dynCall_ii'] = createExportWrapper('dynCall_ii');
 var _asyncify_start_unwind = createExportWrapper('asyncify_start_unwind');
@@ -12392,6 +12361,7 @@ var missingLibrarySymbols = [
   'stringToUTF32',
   'lengthBytesUTF32',
   'writeArrayToMemory',
+  'registerKeyEventCallback',
   'fillDeviceOrientationEventData',
   'registerDeviceOrientationEventCallback',
   'fillDeviceMotionEventData',
@@ -12536,7 +12506,6 @@ var unexportedSymbols = [
   'UTF16Decoder',
   'stringToUTF8OnStack',
   'JSEvents',
-  'registerKeyEventCallback',
   'specialHTMLTargets',
   'maybeCStringToJsString',
   'findEventTarget',
